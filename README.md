@@ -1,2 +1,2 @@
-# guillego.github.io
-Main website
+# Guillermo Galan
+My little presentation card
