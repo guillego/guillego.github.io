@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Europe's trains - part 1 / Guillermo Galan</title>
+    <link rel="favicon" href="assets/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Jost">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+    <script src="https://use.fontawesome.com/9e23e8ae82.js"></script>
+  </head>
+
+  <body>
+  <div id="menu">
+    <span class="title">Guillermo Galán</span>
+    <ul>
+      <li><a href="/about">about</a></li>
+      <li><a href="/blog">blog</a></li>
+      <li><a href="/photography">photography</a></li>
+    </ul>
+    </div>
+    <div id="left">&nbsp;</div>
+    <div id="content">
+
+    <h2>
+      botany
+    </h2>
+    <em>June 20th, 2024</em>
+    <p>
+    Some years ago I moved from Madrid to Copenhagen, and for many years the only way I traveled or thought about traveling between these two cities was by plane.
+    Copenhagen's airport is fairly close to the city and it would take me around 5-6h, door to door to do this trip.
+
+    Last winter I tried something different: I took the train. It's a bit of a crazy journey but I had seen that it was possible and I had the incentive to make some stops along the way this time.
+    </p>
+
+    <h2>The journey</h2>
+    <p>
+    First I traveled from Copenhagen to Bern, that took one day of travel (Copenhagen-Hamburg-Basel-Bern) and around 13h. Perhaps a bit more since my first train (Copenhagen-Hamburg) was delayed and I had to take a later connection.
+    Save for that, the rides were pleasant and the winter landscapes very beautiful to see. I enjoyed working, reading and napping on the train.
+    After a few days in Switzerland I took the train from Bern (actually from Freibourg) and traveled to Barcelona (Freibourg-Geneve-Lyon-Barcelona) in around 11h, this day was really smooth and the landscapes were even more beautiful than on the previous journey.
+    Internet connection in the mountainous stretch between Geneva and Lyon was not the best, but one could work otherwise.
+
+    Finally, after a few days with colleagues in Barcelona, I took a high speed train to Madrid, which took about 2.5h.
+
+    This meant that I had traded 6h of traveling by plane for around 27h of traveling by rail.
+    Was it worth it? For my itinerary requirements and given that I can use train days as work days as long as I can use my laptop and a moderate internet connection, I think it was. But it's clearly not for everyone.
+
+    If I didn't have the luxury of visiting people and stopping along the way, it would make very little sense to do this trip, and at the moment there is no way to make this trip in one go.
+  </p>
+
+  <h2>The cost</h2>
+  <p>
+    In my case I bought an interrail pass for 10 days of travel over 2 months, the pass was 316 €.
+    Each day of travel, no matter how many trains you got in that day, was 31.6 €.
+    So my 3 day trip to Spain was around 95 € without counting seat reservations.
+    Seat reservations were: 5 € on the first day (Hamburg-Basel), 12 € on the second day (Lyon-Barcelona) and 12€ on the third day (Barcelona-Madrid).
+
+    So this multi-day trip was around 125€.
+
+    It's not excessively cheap, but given that this was just before Christmas time, I'd say it was comparable in cost or even cheaper than making the same trip in three flights, especially taking into account that I had a heavy suitcase with me.
+  </p>
+
+  <h2>Seat reservations</h2>
+
+  <p>
+    One big problem here were the seat reservations: There is no unified system for booking seats within Europe.
+
+    The best I've used was Deutsche Bahn, or SBB (Swiss railway operator). DB makes it easy through their website or their app to simply book a seat, wherever you want in the train. When the train agent comes to check your ticket, you just show the interrail pass and your ticket reservation separatedly and it works.
+    SBB fortunately doesn't require a reservation for most of their trains so I didn't have to use it, but their app is very similar.
+
+    Renfe is another story.
+    Renfe requires you to go <b>in person</b> to one of their main stations (Atocha, Chamartin, Sants, etc) and get the reservation there.
+    It's not possible to get a seat reservation via the website or the phone.
+    In my case I was fortunate enough that my sister lives right next to Atocha, and she could go in my to purchase the reservation ahead of time.
+
+    Then it makes sense that the cost of a seat reservation is more than double for Renfe than DB: the in-person, paper transaction is much more costly than having good IT systems in place.
+  </p>
+
+  <h2>The experience</h2>
+  <p>
+    I think interrail provides a really good glimpse into what rail travel in Europe could be like: book a pass and travel without having to worry too much about schedules, delays and missing connections.
+    Of course sometimes you do need to worry about those, since missing a connection could leave you stranded until the next day, given the lack of frequency in many routes.
+
+    The seat reservation system needs to be improved and standardized across Europe. To my surprise, there are already efforts underway to address this issue (keep reading).
+  </p>
+
+  <h2>OSDM - Open Sales and Distribution Model</h2>
+  <p>
+  The <a href="https://uic.org/">international union of railways</a> formed a working group, led by the main european rail operators to define a standard and a set of APIs for the sales and distribution of rail tickets and real time rail information called <a hrf="https://osdm.io/spec/getting-started/">OSDM</a>.
+
+  I've gone through the specification and it's truly comprehensive and exciting to read. For example, with regards to seat reservations it defines APIs to book a seat the following ways:
+  <ul>
+    <li>
+      fully automatically: no preference.
+    </li>
+    <li>
+      semi-automatically: the user can give preferences of window/aisle, table/regular seat, compartment, quiet zone, etc.
+    </li>
+    <li>
+      specific seat: the user can select a specific seat to book.
+    </li>
+  </ul>
+
+  In the specific seat scenario, the railway operator would provide an endpoint <code>GET /coachLayouts/{layoutId}</code> with the layout of the train, which the app developer could use to implement a seat selection UI.
+  However, I couldn't figure out how/if the operator would provide which seats are or are not available in that instance.
+
+  In any case I think this is really exciting and I'm going to be browsing through the railway operator APIs to see what I find (stay tuned!).
+  </p>
+
+  <h2>Further thoughts</h2>
+  <p>When thinking about rail travel in Europe, there are many more things that need to improve, the biggest I can think of are better prices and better/faster routes.
+    It's quite outrageous how rail travel is extremely expensive compared to low-cost flights for the same routes. So I'd like to dive deeper into why and how it could be fixed in a future post.
+  </p>
+
+</br>
+    Guille
+
+    
+    <div class="image-grid">
+      <img src="assets/img/2024/2024-06-18-lemon-tree.jpg" alt="just a yellow lemon tree">
+    </div>
+
+
+    <p>
+      Message me: mail [at] guillego.com
+    </p>
+
+
+      <!-- <div class="bottom-icons">
+        <a href="https://www.linkedin.com/in/guillermo-go" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/guillego/" target="_blank"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/iamsiesta/" target="_blank"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a>
+      </div> -->
+    </div>
+  </body>
+</html>
