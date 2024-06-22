@@ -39,7 +39,7 @@ i {
 
 
 
-/* PC */
+/* GG */
 
 body {
   font-family: 'Helvetica';
@@ -168,5 +168,18 @@ sub {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.wide-image-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.wide-image-grid img {
+  width: 125%;
+  height: auto;
+  aspect-ratio: 2 / 1;
   object-fit: cover;
 }
