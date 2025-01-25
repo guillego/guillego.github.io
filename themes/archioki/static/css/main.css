@@ -1,23 +1,15 @@
 /* Markdown */
 /* Flexoki Theme */
 :root {
-    /* Base theme colors */
     --lightMainColor: var(--flexoki-green-600);
     --lightTextColor: var(--flexoki-black);
     --lightBackgroundColor: var(--flexoki-paper);
     --lightBorderColor: var(--flexoki-green-600);
     --lightCalloutColor: var(--flexoki-blue-600);
     --lightHoverColor: var(--flexoki-green-600);
-    --lightHighlightColor: var(--flexoki-green-500);
+    --lightHighlightColor: var(--flexoki-yellow-600);
     --lightImgBorderColor: var(--flexoki-yellow-50);
-    --lightSelectionBg: var(--flexoki-green-200);
-    --lightSelectionText: var(--flexoki-black);
-    --lightCodeBg: var(--flexoki-green-50);
-    --lightCodeText: var(--flexoki-black);
-    --lightPreBg: var(--flexoki-50);
-    --lightHeadingColor: var(--flexoki-black);
 
-    /* Dark theme colors */
     --darkMainColor: var(--flexoki-yellow-600);
     --darkTextColor: var(--flexoki-paper);
     --darkBackgroundColor: var(--flexoki-950);
@@ -26,12 +18,6 @@
     --darkHoverColor: var(--flexoki-orange-600);
     --darkHighlightColor: var(--flexoki-yellow-600);
     --darkImgBorderColor: var(--flexoki-yellow-50);
-    --darkSelectionBg: var(--flexoki-yellow-800);
-    --darkSelectionText: var(--flexoki-paper);
-    --darkCodeBg: var(--flexoki-900);
-    --darkCodeText: var(--flexoki-paper);
-    --darkPreBg: var(--flexoki-900);
-    --darkHeadingColor: var(--flexoki-100);
 }
 
 html {
@@ -509,4 +495,80 @@ table td {
     grid-template-columns: 1fr;
     max-width: 1200px;
     margin: 2rem auto;
+}
+
+.album-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.album-list li::before {
+    content: none;
+}
+
+.album-item {
+    margin-bottom: 1.5rem;
+    text-indent: 0;
+}
+
+.album-item a {
+    text-decoration: none;
+    border-bottom: none;
+    display: block;
+    padding: 1rem 0;
+}
+
+.album-item a:hover {
+    background-color: transparent;
+}
+
+.album-item a:hover h2 {
+    color: var(--lightMainColor);
+}
+
+.album-item h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.photo-item figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--lightTextColor);
+    font-style: italic;
+    text-align: center;
+}
+
+.album-content {
+    margin: 2rem 0;
+}
+
+.no-prefix::before {
+    content: none !important;
 }
