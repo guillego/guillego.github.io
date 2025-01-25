@@ -27,6 +27,6 @@ I devour podcasts, books, wikipedia, blogs and any source of interesting informa
 
 ### Find me
 
-[guillego](https://github.com/guillego) on GitHub
-[@guillego.com](https://bsky.app/profile/guillego.com) on bluesky
-Message me: mail [at] guillego.com
+- [guillego](https://github.com/guillego) on GitHub
+- [@guillego.com](https://bsky.app/profile/guillego.com) on bluesky
+- Message me: mail [in-the-mailbox-of] guillego.com
