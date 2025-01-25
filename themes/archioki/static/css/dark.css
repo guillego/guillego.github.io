@@ -1,0 +1,187 @@
+body {
+    color: var(--darkTextColor);
+    background-color: var(--darkBackgroundColor);
+}
+
+::-moz-selection {
+    background: var(--darkSelectionBg);
+    color: var(--darkSelectionText);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--darkSelectionBg);
+    color: var(--darkSelectionText);
+    text-shadow: none;
+}
+
+hr {
+    border-top: 3px dotted var(--darkBorderColor);
+}
+
+code {
+    background-color: var(--darkCodeBg);
+    color: var(--darkCodeText);
+    padding: 0.1em 0.2em;
+}
+
+pre {
+    background-color: var(--darkPreBg);
+    line-height: 1.4;
+    overflow-x: auto;
+    padding: 1em;
+}
+
+blockquote {
+    border-color: var(--darkBorderColor);
+}
+
+img {
+    border: 3px solid var(--darkImgBorderColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--darkHeadingColor);
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+    color: var(--darkMainColor);
+}
+
+h1::before { content: "# "; }
+h2::before { content: "## "; }
+h3::before { content: "### "; }
+h4::before { content: "#### "; }
+h5::before { content: "##### "; }
+h6::before { content: "###### "; }
+
+a {
+    border-bottom: 3px solid var(--darkMainColor);
+    color: inherit;
+}
+
+a:hover {
+    background-color: var(--darkMainColor);
+    color: var(--darkBackgroundColor);
+}
+
+.site-description a {
+    color: var(--darkHeadingColor);
+}
+
+.site-description a:hover {
+    color: var(--darkBackgroundColor);
+}
+
+.tags a {
+    border-bottom: 3px solid var(--darkMainColor);
+}
+
+.tags a:hover {
+    background-color: var(--darkMainColor);
+    color: var(--darkBackgroundColor);
+}
+
+.site-title a {
+    color: var(--darkHeadingColor);
+    text-decoration: none !important;
+}
+
+.header nav,
+.footer {
+    border-color: var(--darkBorderColor);
+}
+
+.highlight {
+    background-color: var(--darkPreBg);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    border-top: 0.4rem dotted var(--darkBorderColor);
+    padding: 2rem 0rem;
+    margin-top: 2rem;
+}
+
+.soc:hover {
+    color: var(--darkBackgroundColor);
+}
+
+.draft-label {
+    color: var(--darkMainColor);
+    background-color: var(--darkPreBg);
+}
+
+/* Language labels */
+.highlight pre code::before {
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    float: right;
+}
+
+.highlight pre code[class="language-js"]::before,
+.highlight pre code[class="language-javascript"]::before {
+    content: "js";
+    background: var(--flexoki-yellow-400);
+    color: var(--flexoki-black);
+}
+
+.highlight pre code[class*='language-yml']::before,
+.highlight pre code[class*='language-yaml']::before {
+    content: 'yaml';
+    background: var(--flexoki-magenta-400);
+    color: var(--flexoki-paper);
+}
+
+.highlight pre code[class*='language-shell']::before,
+.highlight pre code[class*='language-bash']::before,
+.highlight pre code[class*='language-sh']::before {
+    content: 'shell';
+    background: var(--flexoki-green-400);
+    color: var(--flexoki-paper);
+}
+
+.highlight pre code[class*='language-json']::before {
+    content: 'json';
+    background: var(--flexoki-blue-400);
+    color: var(--flexoki-paper);
+}
+
+.highlight pre code[class*='language-python']::before,
+.highlight pre code[class*='language-py']::before {
+    content: 'py';
+    background: var(--flexoki-blue-600);
+    color: var(--flexoki-paper);
+}
+
+.highlight pre code[class*='language-css']::before {
+    content: 'css';
+    background: var(--flexoki-cyan-400);
+    color: var(--flexoki-black);
+}
+
+.highlight pre code[class*='language-go']::before {
+    content: 'go';
+    background: var(--flexoki-cyan-600);
+    color: var(--flexoki-paper);
+}
+
+.highlight pre code[class*='language-md']::before,
+.highlight pre code[class*='language-markdown']::before {
+    content: 'md';
+    background: var(--flexoki-blue-600);
+    color: var(--flexoki-paper);
+}

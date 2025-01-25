@@ -1,0 +1,12 @@
+{% import "macros/macros.html" as post_macros %}
+<footer>
+  <div style="display:flex">
+    {% for social in config.extra.social %}
+        <a class="soc" href={{ social.url }} title={{ social.name }}>
+            {{ post_macros::social_icon(name=social.icon) }}
+        </a>
+    {% endfor %}
+  </div>
+  <div class="footer-info">
+  made with ♡ by guillego</div>
+</footer>

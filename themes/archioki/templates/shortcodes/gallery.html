@@ -1,0 +1,5 @@
+<div class="image-grid {% if page.extra.wide %}wide{% endif %}">
+    {% for image in page.extra.images %}
+        <img src="{{ image.src }}" alt="{{ image.alt }}">
+    {% endfor %}
+</div>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main>
+    <article>
+        <div class="post-header">
+            {% if page.date %}
+            <div class="post-meta">
+            </div>
+            {% endif %}
+        </div>
+        
+        <section class="body">
+            {{ page.content | safe }}
+        </section>
+    </article>
+    <time>updated on {{ page.date | date(format="%Y-%m-%d") }}</time>
+</main>
+{% endblock main_content %}
