@@ -1,0 +1,67 @@
+# The URL the site will be built for
+base_url = "https://guillego.com"
+
+title = "guillego"
+
+default_language = "en"
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+theme = "archioki"
+
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+mode = "toggle"
+
+# subtitle will show under the title in index page
+subtitle = "Guille's site"
+
+# if set true, will use external CDN resource to load font and js file
+useCDN = false
+
+favicon = "/img/favicon.ico"
+
+# show in the footer
+copyright = false
+
+goatcounter = "guillegos-sites"
+
+# optional: config your i18n entry
+# [extra.translations]
+# languages = [{name = "en", url = "/"}]
+
+# config multi-language menu and other text
+[[extra.translations.en]]
+show_more = "Read more ⟶"
+previous_page = "← Previous"
+next_page = "Next →"
+posted_on = "on "
+posted_by = "Published by"
+read_time = "minute read"
+all_tags = "All tags"
+menus = [
+    { name = "about", url = "/about", weight = 3 },
+    { name = "tags", url = "/tags", weight = 4 },
+]
+
+[[extra.social]]
+icon = "github"
+name = "github"
+url = "https://github.com/guillego"
+
+[[extra.social]]
+icon = "bluesky"
+name = "bluesky"
+url = "https://bsky.app/profile/guillego.com"

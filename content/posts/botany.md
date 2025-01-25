@@ -1,0 +1,37 @@
++++
+title = "botany"
+date = 2024-06-18
+
+[taxonomies]
+tags = ["personal", "plants"]
++++
+
+Today, in the quiet hours of the morning, sunlight and birdsong started filling the streets. It was far too early for anyone to notice, but today, like many summer mornings in Copenhagen,
+light leaked at first and then flowed through the east-facing windows of my living room. It bathed the room in orange and yellow light
+and washed all over the big, green plants that populate my apartment, who enjoyed this quiet festival while most of us slept.
+
+Of course I don't notice this until hours later when I wake up and wander into the living room. It's the kind of
+morning when I'm still a bit in awe at all the life and light before me, especially because my yesterday self took
+the time to tidy up before going to bed.
+
+The plants look vibrant and thriving in this season. On one corner lives a lush ficus robusta that has stayed in various
+corners of the room and thus has grown a contorted torso in its seeking to bend towards the light.
+The tallest had a hard time this winter before moving homes and lost all its leaves. Seeing it,
+one could be forgiven for thinking that it wouldn't make it past December.
+Not knowing what to do, I left for the holidays and hoped for the best.
+Turns out it only needed space and time to be still,
+and when I came back in January, bright leaves greeted me as they made their way through the bark.
+
+My house is populated by many other leafy beings: some monsteras, a philodendron, tradescantia and alocasia zebrinas, and even a blue star fern that moved in last winter.
+Long before many of those, there was the lemon tree. The lemon tree sits by the window with no shade other than the one provided by the Danish clouds.
+Standing just under a meter from the base of its pot, it's more of a companion tree than an orchard tree.
+
+Throughout our four years together, it has grown dozens of leaves, some flowers and one lemon.
+Every winter, the lemon tree disposes of all its leaves, sitting bare by the window, leaving me wondering if it's finally giving up on this dark environment or merely resting for a bit.
+After those months that seem to stretch without end, bits of green start to sprout, spring brings new growth from its branches, and every summer blooming flowers.
+
+I don't know a lot about botany, but I know enough to know that I love this lemon tree.
+I like to observe how it behaves and learn from how it adapts, and how it waits patiently for the spring. I find myself just wanting to help it thrive, on its own terms, not mine.
+I don't know much about anthropology either, but I know enough to know that I wish this is how humans behaved towards each other and ourselves.
+
+![just a yellow lemon tree](/img/2024/2024-06-18-lemon-tree.jpg)
