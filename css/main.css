@@ -1,0 +1,512 @@
+/* Markdown */
+/* Flexoki Theme */
+:root {
+    /* Base theme colors */
+    --lightMainColor: var(--flexoki-green-600);
+    --lightTextColor: var(--flexoki-black);
+    --lightBackgroundColor: var(--flexoki-paper);
+    --lightBorderColor: var(--flexoki-green-600);
+    --lightCalloutColor: var(--flexoki-blue-600);
+    --lightHoverColor: var(--flexoki-green-600);
+    --lightHighlightColor: var(--flexoki-green-500);
+    --lightImgBorderColor: var(--flexoki-yellow-50);
+    --lightSelectionBg: var(--flexoki-green-200);
+    --lightSelectionText: var(--flexoki-black);
+    --lightCodeBg: var(--flexoki-green-50);
+    --lightCodeText: var(--flexoki-black);
+    --lightPreBg: var(--flexoki-50);
+    --lightHeadingColor: var(--flexoki-black);
+
+    /* Dark theme colors */
+    --darkMainColor: var(--flexoki-yellow-600);
+    --darkTextColor: var(--flexoki-paper);
+    --darkBackgroundColor: var(--flexoki-950);
+    --darkBorderColor: var(--flexoki-yellow-600);
+    --darkCalloutColor: var(--flexoki-blue-600);
+    --darkHoverColor: var(--flexoki-orange-600);
+    --darkHighlightColor: var(--flexoki-yellow-600);
+    --darkImgBorderColor: var(--flexoki-yellow-50);
+    --darkSelectionBg: var(--flexoki-yellow-800);
+    --darkSelectionText: var(--flexoki-paper);
+    --darkCodeBg: var(--flexoki-900);
+    --darkCodeText: var(--flexoki-paper);
+    --darkPreBg: var(--flexoki-900);
+    --darkHeadingColor: var(--flexoki-100);
+}
+
+html {
+    color: var(--lightTextColor);
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+body {
+    display: block;
+    margin: 8px;
+    color: var(--lightTextColor);
+    background-color: var(--lightBackgroundColor);
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.content {
+    animation: intro 0.3s both;
+    animation-delay: 0.15s;
+}
+
+::selection {
+    background: var(--lightHighlightColor);
+    color: #fff;
+}
+
+p {
+    /* font-family: 'Fira Sans', sans-serif; */
+    line-height: 1.5;
+}
+
+hr {
+    border: 0;
+    border-top: 3px dotted var(--lightBorderColor);
+    margin: 1em 0;
+}
+
+blockquote {
+    border-left: 3px solid var(--lightBorderColor);
+    color: #737373;
+    margin: 0;
+    padding-left: 1em;
+}
+
+a {
+    border-bottom: 3px solid var(--lightMainColor);
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--lightHoverColor);
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding-left: 2ch;
+}
+
+ul li {
+    text-indent: -2ch;
+}
+
+ul > li::before {
+    content: "* ";
+    font-weight: bold;
+}
+
+/* Images */
+img {
+    border: 3px solid var(--lightImgBorderColor);
+    max-width: 100%;
+}
+
+figure {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    max-width: 100%;
+}
+
+figure img {
+    max-height: 500px;
+}
+
+@media screen and (min-width: 600px) {
+    figure {
+        padding: 0 40px;
+    }
+}
+
+figure h4 {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+figure h4::before {
+    content: "↳ ";
+}
+
+/* Code blocks */
+code {
+    background-color: #f1f1f1;
+    padding: 0.1em 0.2em;
+}
+
+pre {
+    background-color: #ececec;
+    line-height: 1.4;
+    overflow-x: auto;
+    padding: 1em;
+}
+
+.highlight pre ::selection {
+    background: rgba(255, 255, 255, 0.2);
+    color: inherit;
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+    font-size: 100%;
+    padding: 0;
+}
+
+/* Containers */
+.content {
+    margin-bottom: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    padding: 0 1ch;
+    word-wrap: break-word;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+header .main {
+    font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.2rem;
+    margin-top: 2em;
+}
+
+h1::before {
+    color: var(--lightMainColor);
+    content: "# ";
+}
+
+h2::before {
+    color: var(--lightMainColor);
+    content: "## ";
+}
+
+h3::before {
+    color: var(--lightMainColor);
+    content: "### ";
+}
+
+h4::before {
+    color: var(--lightMainColor);
+    content: "#### ";
+}
+
+h5::before {
+    color: var(--lightMainColor);
+    content: "##### ";
+}
+
+h6::before {
+    color: var(--lightMainColor);
+    content: "###### ";
+}
+
+.meta {
+    color: #999;
+    letter-spacing: -0.5px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    border-top: 0.4rem dotted var(--lightBorderColor);
+    padding: 2rem 0rem;
+    margin-top: 2rem;
+}
+
+.soc {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 2px solid;
+    border-bottom: none;
+}
+
+.footer-info {
+    padding: var(--footer-padding);
+}
+
+#main_title {
+    margin-bottom: 10px;
+}
+
+/* Common */
+.title h1 {
+    margin-bottom: 0;
+}
+
+time {
+    color: grey;
+}
+
+span {
+    color: grey;
+}
+
+/* Posts */
+article .title {
+    margin-bottom: 1em;
+}
+
+/* Callout */
+.callout {
+    background-color: var(--lightCalloutColor);
+    color: #fff;
+    padding: 1em;
+}
+
+.callout p {
+    /* font-family: 'IBM Plex Mono', monospace; */
+    margin: 0;
+}
+
+.callout a {
+    border-bottom: 3px solid #fff;
+}
+
+.callout a:hover {
+    background-color: #fff;
+    color: var(--lightCalloutColor);
+}
+
+.site-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags li::before {
+    content: "🏷 ";
+}
+
+.tags a {
+    border-bottom: 3px solid var(--lightMainColor);
+}
+
+.tags a:hover {
+    color: white;
+    background-color: var(--lightHoverColor);
+}
+
+/* svg {
+    max-height: 15px;
+} */
+
+.soc:hover {
+    color: white;
+}
+
+.draft-label {
+    color: var(--lightBorderColor);
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-left: 6px;
+    background-color: #f9f2f4;
+}
+
+pre {
+    font-family: "Roboto Mono", monospace;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre code[class*="language-"] {
+    -webkit-overflow-scrolling: touch;
+}
+
+pre code[class*="language-"]::before {
+    background: black;
+    border-radius: 0 0 0.25rem 0.25rem;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.025rem;
+    padding: 0.1rem 0.5rem;
+    position: absolute;
+    right: 1rem;
+    text-align: right;
+    text-transform: uppercase;
+    top: 0;
+}
+
+pre code[class="language-javaScript"]::before,
+pre code[class="language-js"]::before {
+    content: "js";
+    background: #f7df1e;
+    color: black;
+}
+
+pre code[class="language-typescript"]::before,
+pre code[class="language-ts"]::before {
+    content: "ts";
+    background: dodgerblue;
+    color: black;
+}
+
+pre code[class*="language-yml"]::before,
+pre code[class*="language-yaml"]::before {
+    content: "yaml";
+    background: #f71e6a;
+    color: white;
+}
+
+pre code[class*="language-shell"]::before,
+pre code[class*="language-bash"]::before,
+pre code[class*="language-sh"]::before {
+    content: "shell";
+    background: green;
+    color: white;
+}
+
+pre code[class*="language-json"]::before {
+    content: "json";
+    background: dodgerblue;
+    color: #000000;
+}
+
+pre code[class*="language-python"]::before,
+pre code[class*="language-py"]::before {
+    content: "py";
+    background: blue;
+    color: yellow;
+}
+
+pre code[class*="language-css"]::before {
+    content: "css";
+    background: cyan;
+    color: black;
+}
+
+pre code[class*="language-go"]::before {
+    content: "Go";
+    background: cyan;
+    color: royalblue;
+}
+
+pre code[class*="language-md"]::before,
+pre code[class*="language-md"]::before {
+    content: "Markdown";
+    background: royalblue;
+    color: whitesmoke;
+}
+
+pre code[class*="language-rust"]::before,
+pre code[class*="language-rs"]::before {
+    content: "rust";
+    background: #fff8f6;
+    color: #ff4647;
+}
+
+pre code[class*="language-cpp"]::before,
+pre code[class*="language-c++"]::before {
+    content: "cpp";
+    background: #5e97d0;
+    color: #044f88;
+}
+
+/* table */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table th {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+    font-size: large;
+}
+
+table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+.footnote-definition {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 10px;
+}
+
+.social-icon {
+    border: none !important;
+    max-height: 15px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icon path {
+    fill: currentColor;
+}
+
+.soc {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 2px solid currentColor;
+    border-bottom: none;
+    color: var(--lightTextColor);
+}
+
+.soc:hover {
+    background-color: transparent;
+    color: var(--lightHoverColor);
+}
+
+.soc:hover .social-icon path {
+    fill: var(--lightHoverColor);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.image-grid.wide {
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
