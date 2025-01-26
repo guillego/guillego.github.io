@@ -592,25 +592,22 @@ table td {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 2rem 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 920px;
 }
 
 .photo-item {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
 }
 
 .photo-item img {
-    max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
     object-fit: contain;
+    max-height: none;
 }
 
 .photo-item figcaption {
