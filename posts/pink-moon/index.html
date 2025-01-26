@@ -118,7 +118,6 @@
     </nav>
 </header>
 
-
         
     
 <main>
@@ -160,7 +159,6 @@
 </main>
 
 
-
         <footer>
   <div style="display:flex">
     
@@ -185,35 +183,37 @@
   made with ♡ by guillego</div>
 </footer>
     </div>
-        <button id="back-to-top" aria-label="Back to top">↑</button>
-        <script>
-            // Click handler for heading links
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
-                    heading.addEventListener('click', function() {
-                        window.location.hash = this.id;
-                    });
-                });
-
-                // Back to top functionality
-                const backToTopButton = document.getElementById('back-to-top');
-                
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 300) {
-                        backToTopButton.classList.add('show');
-                    } else {
-                        backToTopButton.classList.remove('show');
-                    }
-                });
-
-                backToTopButton.addEventListener('click', () => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+    <button id="back-to-top" title="Back to top">↑</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Heading click handler
+            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                heading.addEventListener('click', function() {
+                    window.location.hash = this.id;
                 });
             });
-        </script>
+
+            // Back to top functionality
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            function toggleBackToTop() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            }
+
+            window.addEventListener('scroll', toggleBackToTop);
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
     </body>
 </html>
 </body>
