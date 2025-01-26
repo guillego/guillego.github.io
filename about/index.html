@@ -178,14 +178,36 @@ Previously spent a few years in the health-tech domain, augmenting radiology at 
   made with ♡ by guillego</div>
 </footer>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
-                heading.addEventListener('click', function() {
-                    window.location.hash = this.id;
+        <button id="back-to-top" aria-label="Back to top">↑</button>
+        <script>
+            // Click handler for heading links
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                    heading.addEventListener('click', function() {
+                        window.location.hash = this.id;
+                    });
+                });
+
+                // Back to top functionality
+                const backToTopButton = document.getElementById('back-to-top');
+                
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTopButton.classList.add('show');
+                    } else {
+                        backToTopButton.classList.remove('show');
+                    }
+                });
+
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
         </script>
+    </body>
+</html>
 </body>
 </html>
