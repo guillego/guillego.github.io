@@ -12,17 +12,17 @@
         {% endif %}
 
         {% if page.extra.images %}
-            <div class="photo-grid">
-                {% for image in page.extra.images %}
-                    <figure class="photo-item">
-                        <img src="{{ image.src }}" alt="{{ image.alt }}">
-                        {% if image.caption %}
-                            <figcaption>{{ image.caption }}</figcaption>
-                        {% endif %}
-                    </figure>
-                {% endfor %}
-            </div>
-        {% endif %}
-    </article>
+        <div class="photo-grid">
+            {% for image in page.extra.images %}
+                <figure class="photo-item">
+                    <img src="{{ image.src }}" alt="{{ image.alt }}">
+                    {% if image.caption %}
+                        <figcaption>{{ image.caption }}</figcaption>
+                    {% endif %}
+                </figure>
+            {% endfor %}
+        </div>
+    {% endif %}
+</article>
 </main>
 {% endblock main_content %}
