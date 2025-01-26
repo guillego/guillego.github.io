@@ -131,8 +131,22 @@ footer {
     margin-top: 2rem;
 }
 
+.soc {
+    color: var(--darkTextColor);
+    border-right-color: var(--darkTextColor);
+}
+
 .soc:hover {
-    color: var(--darkBackgroundColor);
+    background-color: transparent;
+    color: var(--darkHoverColor);
+}
+
+.soc:hover .social-icon path {
+    fill: var(--darkHoverColor);
+}
+
+.social-icon path {
+    fill: var(--darkTextColor);
 }
 
 .draft-label {
