@@ -632,6 +632,12 @@ table td {
     max-width: 920px;
 }
 
+@media screen and (max-width: 768px) {
+    .preview-grid {
+        display: none;
+    }
+}
+
 .preview-item {
     border: none;
     transition: opacity 0.2s ease;
