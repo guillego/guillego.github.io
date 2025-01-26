@@ -717,10 +717,51 @@ nav a {
     font-weight: 500;
     font-size: 1.5rem;
 }
-
 .footer-info {
     padding: var(--footer-padding);
     font-family: var(--heading-font);
     font-weight: 400;
     font-size: 0.9rem;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--lightMainColor);
+    color: var(--lightBackgroundColor);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    background-color: var(--lightHoverColor);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    #back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.2rem;
+    }
 }

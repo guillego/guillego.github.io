@@ -228,3 +228,12 @@ footer {
 .preview-item img {
     border-color: var(--darkImgBorderColor);
 }
+
+#back-to-top {
+    background-color: var(--darkMainColor);
+    color: var(--darkBackgroundColor);
+}
+
+#back-to-top:hover {
+    background-color: var(--darkHoverColor);
+}
