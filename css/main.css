@@ -576,6 +576,18 @@ table td {
     color: var(--flexoki-900);
 }
 
+.album-item h2 time,
+.photo-album h1 time {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    font-family: var(--heading-font);
+}
+
+.album-item h2 time {
+    font-size: 1rem;
+}
+
 .album-list {
     list-style: none;
     padding: 0;
