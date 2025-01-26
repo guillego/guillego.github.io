@@ -497,6 +497,21 @@ table td {
     margin: 2rem auto;
 }
 
+/* Album styles */
+.album-item h2 {
+    color: var(--flexoki-800);
+    margin-bottom: 0.2em;
+}
+
+.album-item a {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.album-item a:hover h2 {
+    color: var(--flexoki-900);
+}
+
 .album-list {
     list-style: none;
     padding: 0;
@@ -571,4 +586,6 @@ table td {
 
 .no-prefix::before {
     content: none !important;
+}
+
 }
