@@ -63,6 +63,6 @@ alt = "NORDHAVN-5879.jpg"
 caption = ""
 +++
 
-It was one of those rare winter mornings in Copenhagen when the darkness finally surrenders—if only briefly—to something miraculous. Dawn arrived like spilled watercolors, all orange and pink light pouring through my apartment windows, and I couldn't help but smile upon opening my eyes – what a gift!.
+It was one of those rare winter mornings in Copenhagen when the darkness finally surrenders—if only briefly—to something miraculous. Dawn arrived like spilled watercolors, orange and pink light pouring through my apartment windows, and I couldn't help but smile upon opening my eyes—what a gift!
 
 I threw on some warm layers, fingers fumbling with excitement as I grabbed my camera. The bicycle ride to Nordhavn was a blur of condensed breath and squeaking tires on frost, my heart already knowing what awaited. There, where the city meets the sea, I found what I'd hoped for: that fleeting moment when the Danish winter, usually so gloomy and gray, opens like a crisp and colorful love letter to all who are up in the early, quiet hours of the morning.
