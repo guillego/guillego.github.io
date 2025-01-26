@@ -3,14 +3,33 @@ body {
     background-color: var(--darkBackgroundColor);
 }
 
-::-moz-selection {
-    background: var(--darkHighlightColor);
-    color: var(--darkTextColor);
+::selection {
+    background-color: var(--darkHighlightColor);
+    color: var(--darkBackgroundColor);
+    text-shadow: none;
 }
 
-::selection {
-    background: var(--darkHighlightColor);
-    color: var(--darkTextColor);
+::-moz-selection {
+    background-color: var(--darkHighlightColor);
+    color: var(--darkBackgroundColor);
+    text-shadow: none;
+}
+
+/* Limit selection width */
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+li::selection,
+span::selection {
+    background-color: var(--darkHighlightColor);
+    color: var(--darkBackgroundColor);
+    text-shadow: none;
+    display: inline-block;
+    max-width: 100%;
 }
 
 hr {
