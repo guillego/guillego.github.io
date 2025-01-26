@@ -3,3 +3,6 @@
 
 # Zola generated static site
 public/
+
+# Original high res photographs (they are not backed up in git)
+src_photos/
