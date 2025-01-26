@@ -83,8 +83,32 @@ body {
 }
 
 ::selection {
-    background: var(--lightHighlightColor);
-    color: var(--lightTextColor);
+    background-color: var(--lightHighlightColor);
+    color: var(--lightBackgroundColor);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background-color: var(--lightHighlightColor);
+    color: var(--lightBackgroundColor);
+    text-shadow: none;
+}
+
+/* Limit selection width */
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+li::selection,
+span::selection {
+    background-color: var(--lightHighlightColor);
+    color: var(--lightBackgroundColor);
+    text-shadow: none;
+    display: inline-block;
+    max-width: 100%;
 }
 
 p {
