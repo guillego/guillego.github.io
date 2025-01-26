@@ -15,7 +15,7 @@
     --darkBackgroundColor: var(--flexoki-950);
     --darkBorderColor: var(--flexoki-yellow-600);
     --darkCalloutColor: var(--flexoki-blue-600);
-    --darkHoverColor: var(--flexoki-orange-600);
+    --darkHoverColor: var(--flexoki-yellow-600);
     --darkHighlightColor: var(--flexoki-yellow-600);
     --darkImgBorderColor: var(--flexoki-yellow-50);
 
@@ -84,7 +84,7 @@ body {
 
 ::selection {
     background: var(--lightHighlightColor);
-    color: #fff;
+    color: var(--lightTextColor);
 }
 
 p {
@@ -113,7 +113,7 @@ a {
 
 a:hover {
     background-color: var(--lightHoverColor);
-    color: #fff;
+    color: var(--lightBackgroundColor);
 }
 
 ul {
