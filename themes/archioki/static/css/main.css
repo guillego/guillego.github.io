@@ -2,7 +2,7 @@
 /* Flexoki Theme */
 :root {
     --lightMainColor: var(--flexoki-green-600);
-    --lightTextColor: var(--flexoki-black);
+    --lightTextColor: var(--flexoki-900);
     --lightBackgroundColor: var(--flexoki-paper);
     --lightBorderColor: var(--flexoki-green-600);
     --lightCalloutColor: var(--flexoki-blue-600);
@@ -18,13 +18,42 @@
     --darkHoverColor: var(--flexoki-orange-600);
     --darkHighlightColor: var(--flexoki-yellow-600);
     --darkImgBorderColor: var(--flexoki-yellow-50);
+
+    /* Font family variables */
+    --heading-font: 'Plush', serif;
+    --body-font: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;    --code-font: 'IBM Plex Mono', monospace;
+    --nav-font: 'Plush', serif;
+    --meta-font: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+
+    /* Font sizes */
+    --homepage-font-size: 16px;
+    --heading-font-size: 1.2rem;
+    --body-font-size: 16px;
+    --code-font-size: 15px;
+    --meta-font-size: 15px;
+
+    /* Line heights */
+    --homepage-line-height: 1.75;
+    --body-line-height: 1.6;
+    --code-line-height: 1.4;
+
+    /* Other typography settings */
+    --main-max-width: 768px;
+    --avatar-size: 56px;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --inline-code-border-radius: 2px;
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
 }
 
 html {
     color: var(--lightTextColor);
-    font-family: "Roboto Mono", monospace;
-    font-size: 15px;
-    line-height: 1.6em;
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
 }
 
 body {
@@ -96,7 +125,7 @@ ul li {
     text-indent: -2ch;
 }
 
-ul > li::before {
+ul>li::before {
     content: "* ";
     font-weight: bold;
 }
@@ -179,6 +208,11 @@ header {
 
 header .main {
     font-size: 1.5rem;
+    font-family: var(--heading-font);
+}
+
+.site-description {
+    font-family: var(--heading-font);
 }
 
 h1,
@@ -187,7 +221,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 1.2rem;
+    font-family: var(--heading-font);
+    font-size: var(--heading-font-size);
     margin-top: 2em;
 }
 
@@ -222,8 +257,11 @@ h6::before {
 }
 
 .meta {
-    color: #999;
+    font-family: var(--heading-font);
+    font-size: var(--meta-font-size);
+    color: var(--flexoki-200);
     letter-spacing: -0.5px;
+    font-weight: 400;
 }
 
 /* Footer */
@@ -259,10 +297,14 @@ footer {
 
 time {
     color: grey;
+    font-family: var(--heading-font);
+    font-weight: 400;
 }
 
 span {
     color: grey;
+    font-family: var(--heading-font);
+    font-weight: 400;
 }
 
 /* Posts */
@@ -327,12 +369,10 @@ article .title {
 }
 
 pre {
-    font-family: "Roboto Mono", monospace;
+    font-family: var(--code-font);
+    font-size: var(--code-font-size);
+    line-height: var(--code-line-height);
     position: relative;
-    -webkit-overflow-scrolling: touch;
-}
-
-pre code[class*="language-"] {
     -webkit-overflow-scrolling: touch;
 }
 
@@ -588,4 +628,26 @@ table td {
     content: none !important;
 }
 
+nav {
+    font-family: var(--heading-font);
+    font-weight: 400;
+}
+
+nav a {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.main {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.footer-info {
+    padding: var(--footer-padding);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 0.9rem;
 }

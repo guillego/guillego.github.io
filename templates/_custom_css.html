@@ -37,26 +37,36 @@
   }
 
   /* typography */
-  body {
-    --main-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --homepage-max-width: 768px;
-    --main-max-width: 768px;
-    --avatar-size: 56px;
-    --homepage-font-size: 16px;
-    --homepage-line-height: 1.75;
-    --paragraph-font-size: 16px;
-    --paragraph-line-height: 1.75;
-    --aside-font-size: 15px;
-    --img-border-radius: 0px;
-    --detail-border-radius: 0px;
-    --dark-mode-img-brightness: 0.75;
-    --dark-mode-chart-brightness: 0.75;
-    --inline-code-border-radius: 2px;
-    --inline-code-bg-color: var(--primary-pale-color);
-    --block-code-border-radius: 0px;
-    --block-code-border-color: var(--primary-color);
-    --detail-border-color: var(--primary-color);
-  }
+/* typography */
+:root {
+  /* Font family variables */
+  --heading-font: 'Plush', serif;
+  --body-font: 'Plush', serif;
+  --code-font: 'IBM Plex Mono', monospace;
+  --nav-font: 'Plush', serif;
+  --meta-font: 'Plush', serif;
+  
+  /* Font sizes */
+  --homepage-font-size: 16px;
+  --heading-font-size: 1.2rem;
+  --body-font-size: 16px;
+  --code-font-size: 15px;
+  --meta-font-size: 15px;
+  
+  /* Line heights */
+  --homepage-line-height: 1.75;
+  --body-line-height: 1.6;
+  --code-line-height: 1.4;
+  
+  /* Other typography settings */
+  --main-max-width: 768px;
+  --avatar-size: 56px;
+  --img-border-radius: 0px;
+  --detail-border-radius: 0px;
+  --inline-code-border-radius: 2px;
+  --block-code-border-radius: 0px;
+  --block-code-border-color: var(--primary-color);
+  --detail-border-color: var(--primary-color);
+}
 
 </style>
