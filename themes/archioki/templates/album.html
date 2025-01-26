@@ -6,25 +6,43 @@
         <h1 class="no-prefix">{{ page.title }}</h1>
         <time>{{ page.date | date(format="%B %Y") }}</time>
 
+                {% if page.extra.images %}
+                    <div class="preview-grid">
+                        {% for image in page.extra.images %}
+                            <a onclick="scrollToImage('photo-{{ loop.index }}')" class="preview-item">
+                                <img src="{{ image.src }}" alt="{{ image.alt }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                            
+                {% if page.content %}
+                    <div class="album-content">
+                        {{ page.content | safe }}
+                    </div>
+                {% endif %}
         
-        {% if page.content %}
-            <div class="album-content">
-                {{ page.content | safe }}
-            </div>
-        {% endif %}
-
-        {% if page.extra.images %}
-        <div class="photo-grid">
-            {% for image in page.extra.images %}
-                <figure class="photo-item">
-                    <img src="{{ image.src }}" alt="{{ image.alt }}">
-                    {% if image.caption %}
-                        <figcaption>{{ image.caption }}</figcaption>
-                    {% endif %}
-                </figure>
-            {% endfor %}
-        </div>
-    {% endif %}
-</article>
-</main>
-{% endblock main_content %}
+                {% if page.extra.images %}
+                    <div class="photo-grid">
+                        {% for image in page.extra.images %}
+                            <figure id="photo-{{ loop.index }}" class="photo-item">
+                                <img src="{{ image.src }}" alt="{{ image.alt }}">
+                                {% if image.caption %}
+                                    <figcaption>{{ image.caption }}</figcaption>
+                                {% endif %}
+                            </figure>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </article>
+        </main>
+        
+        <script>
+        function scrollToImage(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        </script>
+        {% endblock main_content %}
