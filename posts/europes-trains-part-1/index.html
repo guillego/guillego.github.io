@@ -139,13 +139,13 @@
             <p>Some years ago I moved from Madrid to Copenhagen, and for many years the only way I traveled or thought about traveling between these two cities was by plane.
 Copenhagen's airport is fairly close to the city and it would take me around 5-6h, door to door to do this trip.</p>
 <p>Last winter I tried something different: I took the train. It's a bit of a crazy journey but a trainfluencer showed me that it was possible and I had the incentive to make some stops along the way this time.</p>
-<h2 id="the-journey">The journey<a class="zola-anchor" href="#the-journey" aria-label="Anchor link for: the-journey">🔗</a></h2>
+<h2 id="the-journey">The journey<a class="anchor-link" href="#the-journey" aria-label="Anchor link for: the-journey"></a></h2>
 <p>First I traveled from Copenhagen to Bern, that took one day of travel (Copenhagen-Hamburg-Basel-Bern) and around 13h. Perhaps a bit more since my first train (Copenhagen-Hamburg) was delayed and I had to take a later connection.
 Save for that, the rides were pleasant and the winter landscapes very beautiful to see. I enjoyed working, reading and napping on the train.</p>
 <p>After a few days in Switzerland I took the train from Bern (actually from Freibourg) and traveled to Barcelona (Freibourg-Geneve-Lyon-Barcelona) in around 11h, this day was really smooth and the landscapes were even more beautiful than on the previous journey.
 Internet connection in the mountainous stretch between Geneva and Lyon was not the best, but one could work otherwise.</p>
 <p>Finally, after a few days with colleagues in Barcelona, I took a high speed train to Madrid, which took about 2.5h.</p>
-<h2 id="further-thoughts">Further thoughts<a class="zola-anchor" href="#further-thoughts" aria-label="Anchor link for: further-thoughts">🔗</a></h2>
+<h2 id="further-thoughts">Further thoughts<a class="anchor-link" href="#further-thoughts" aria-label="Anchor link for: further-thoughts"></a></h2>
 <p>When thinking about rail travel in Europe, there are many more things that need to improve, the biggest I can think of are better prices and better/faster routes.
 It's quite outrageous how rail travel is extremely expensive compared to low-cost flights for the same routes. So I'd like to dive deeper into why and how it could be fixed in a future post.</p>
 <p><em>Some photos taken from the train (Dec 2023/Jan 2024)</em></p>
@@ -209,5 +209,14 @@ It's quite outrageous how rail travel is extremely expensive compared to low-cos
   made with ♡ by guillego</div>
 </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                heading.addEventListener('click', function() {
+                    window.location.hash = this.id;
+                });
+            });
+        });
+        </script>
 </body>
 </html>

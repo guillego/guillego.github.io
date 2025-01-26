@@ -178,5 +178,14 @@ Previously spent a few years in the health-tech domain, augmenting radiology at 
   made with ♡ by guillego</div>
 </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                heading.addEventListener('click', function() {
+                    window.location.hash = this.id;
+                });
+            });
+        });
+        </script>
 </body>
 </html>

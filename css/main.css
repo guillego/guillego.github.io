@@ -250,34 +250,41 @@ h6 {
     margin-top: 2em;
 }
 
-h1::before {
-    color: var(--lightMainColor);
-    content: "# ";
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-size: var(--heading-font-size);
+    margin-top: 2em;
+    position: relative;
 }
 
-h2::before {
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     color: var(--lightMainColor);
-    content: "## ";
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    cursor: pointer;
 }
 
-h3::before {
-    color: var(--lightMainColor);
-    content: "### ";
+h1::before { content: "● "; }
+h2::before { content: "❋ "; }
+h3::before { content: "❋❋ "; }
+h4::before { content: "❋❋❋ "; }
+h5::before { content: "❋❋❋❋ "; }
+h6::before { content: "❋❋❋❋ "; }
+
+h1:hover::before, h2:hover::before, h3:hover::before,
+h4:hover::before, h5:hover::before, h6:hover::before {
+    opacity: 1;
 }
 
-h4::before {
-    color: var(--lightMainColor);
-    content: "#### ";
+/* Make the entire heading area clickable */
+h1, h2, h3, h4, h5, h6 {
+    cursor: pointer;
 }
 
-h5::before {
+h1:hover, h2:hover, h3:hover,
+h4:hover, h5:hover, h6:hover {
     color: var(--lightMainColor);
-    content: "##### ";
-}
-
-h6::before {
-    color: var(--lightMainColor);
-    content: "###### ";
 }
 
 .meta {
