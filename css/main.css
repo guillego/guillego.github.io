@@ -624,6 +624,32 @@ table td {
     transition: color 0.2s ease;
 }
 
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 920px;
+}
+
+.preview-item {
+    border: none;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.preview-item:hover {
+    opacity: 0.8;
+    background: none;
+}
+
+.preview-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid var(--lightImgBorderColor);
+}
+
 .photo-grid {
     display: flex;
     flex-direction: column;

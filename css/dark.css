@@ -217,11 +217,14 @@ footer {
     color: var(--flexoki-paper);
 }
 
-/* Album styles - dark mode */
 .album-item h2 {
     color: var(--flexoki-200);
 }
 
 .album-item a:hover h2 {
     color: var(--darkHoverColor);
+}
+
+.preview-item img {
+    border-color: var(--darkImgBorderColor);
 }
