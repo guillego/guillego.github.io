@@ -4,6 +4,8 @@
 <main>
     <article class="photo-album">
         <h1 class="no-prefix">{{ page.title }}</h1>
+        <time>{{ page.date | date(format="%B %Y") }}</time>
+
         
         {% if page.content %}
             <div class="album-content">

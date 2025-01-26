@@ -14,7 +14,8 @@
         {% for page in section.pages %}
             <li class="album-item">
                 <a href="{{ page.permalink }}">
-                    <h2 class="no-prefix">{{ page.title }}</h2>
+                    <h2 class="no-prefix">{{ page.title }} <time>• {{ page.date | date(format="%B %Y") }}</time></h2>
+
                 </a>
             </li>
         {% endfor %}
