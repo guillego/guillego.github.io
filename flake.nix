@@ -29,6 +29,7 @@
             rustToolchain
             pkg-config
             openssl
+            zola
           ];
 
           shellHook = ''
