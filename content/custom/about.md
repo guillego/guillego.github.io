@@ -26,7 +26,7 @@ I like to [capture life with my camera](https://instagram.com/iamsiesta/), take 
 I devour podcasts, books, wikipedia, blogs and any source of interesting information. Is there such thing as being too curious?
 
 ### Find me
-
+- [Guillermo Galan Olleros](https://www.linkedin.com/in/guillermo-go/)
 - [guillego](https://github.com/guillego) on GitHub
 - [@guillego.com](https://bsky.app/profile/guillego.com) on bluesky
 - Message me: mail [in-the-mailbox-of] guillego.com
