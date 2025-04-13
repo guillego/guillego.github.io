@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main>
+    <h1 class="no-prefix">{{ section.title }}</h1>
+    
+    {% if section.content %}
+        <div class="section-content">
+            {{ section.content | safe }}
+        </div>
+    {% endif %}
+
+    <ul class="album-list">
+        {% for page in section.pages %}
+            <li class="album-item">
+                <a href="{{ page.permalink }}">
+                    <h2 class="no-prefix">{{ page.title }} <time>• {{ page.date | date(format="%B %Y") }}</time></h2>
+
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock main_content %}

@@ -54,8 +54,9 @@ read_time = "minute read"
 all_tags = "All tags"
 menus = [
     { name = "photography", url = "/photography", weight = 2 },
-    { name = "about", url = "/about", weight = 3 },
-    { name = "tags", url = "/tags", weight = 4 },
+    { name = "projects", url = "/projects", weight = 3 },
+    { name = "about", url = "/about", weight = 4 },
+    { name = "tags", url = "/tags", weight = 5 },
 ]
 
 [[extra.social]]
