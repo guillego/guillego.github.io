@@ -93,7 +93,7 @@ a:hover {
 }
 
 .site-description a {
-    color: var(--darkHeadingColor);
+    color: var(--darkHoverColor);
 }
 
 .site-description a:hover {
@@ -110,7 +110,7 @@ a:hover {
 }
 
 .site-title a {
-    color: var(--darkHeadingColor);
+    color: var(--darkHoverColor);
     text-decoration: none !important;
 }
 
@@ -236,4 +236,26 @@ footer {
 
 #back-to-top:hover {
     background-color: var(--darkHoverColor);
+}
+
+h1::before { content: "● "; }
+h2::before { content: "❋ "; }
+h3::before { content: "❋❋ "; }
+h4::before { content: "❋❋❋ "; }
+h5::before { content: "❋❋❋❋ "; }
+h6::before { content: "❋❋❋❋ "; }
+
+h1:hover::before, h2:hover::before, h3:hover::before,
+h4:hover::before, h5:hover::before, h6:hover::before {
+    opacity: 1;
+}
+
+/* Make the entire heading area clickable */
+h1, h2, h3, h4, h5, h6 {
+    cursor: pointer;
+}
+
+h1:hover, h2:hover, h3:hover,
+h4:hover, h5:hover, h6:hover {
+    color: var(--darkMainColor);
 }
