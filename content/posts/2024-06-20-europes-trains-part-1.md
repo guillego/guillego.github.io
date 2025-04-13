@@ -1,6 +1,7 @@
 +++
 title = "Europe's trains - part 1"
 date = 2024-06-20
+path = "posts/2024-06-20-europes-trains-part-1"
 
 [taxonomies]
 tags = ["travel", "trains"]

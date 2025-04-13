@@ -1,6 +1,7 @@
 +++
 title = "the ufo landing patch"
 date = 2024-06-27
+path = "posts/2024-06-27-ufo-landing-patch"
 
 [taxonomies]
 tags = ["personal", "nature"]

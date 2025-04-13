@@ -1,6 +1,7 @@
 +++
 title = "yet another blog"
 date = 2024-06-17
+path = "posts/2024-06-17-yet-another-blog"
 
 [taxonomies]
 tags = ["personal"]

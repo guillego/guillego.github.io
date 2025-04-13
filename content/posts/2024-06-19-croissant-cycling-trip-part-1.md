@@ -1,6 +1,7 @@
 +++
 title = "croissant cycling trip - part 1"
 date = 2024-06-19
+path = "posts/2024-06-19-croissant-cycling-trip-part-1"
 
 [taxonomies]
 tags = ["cycling", "travel", "gear"]
