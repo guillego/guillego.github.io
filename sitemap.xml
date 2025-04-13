@@ -18,28 +18,35 @@
         <loc>https://guillego.com/posts/</loc>
     </url>
     <url>
-        <loc>https://guillego.com/posts/botany/</loc>
+        <loc>https://guillego.com/posts/2024-06-17-yet-another-blog/</loc>
+        <lastmod>2024-06-17</lastmod>
+    </url>
+    <url>
+        <loc>https://guillego.com/posts/2024-06-18-botany/</loc>
         <lastmod>2024-06-18</lastmod>
     </url>
     <url>
-        <loc>https://guillego.com/posts/croissant-cycling-trip-part-1/</loc>
+        <loc>https://guillego.com/posts/2024-06-19-croissant-cycling-trip-part-1/</loc>
         <lastmod>2024-06-19</lastmod>
     </url>
     <url>
-        <loc>https://guillego.com/posts/europes-trains-part-1/</loc>
+        <loc>https://guillego.com/posts/2024-06-20-europes-trains-part-1/</loc>
         <lastmod>2024-06-20</lastmod>
     </url>
     <url>
-        <loc>https://guillego.com/posts/pink-moon/</loc>
+        <loc>https://guillego.com/posts/2024-06-21-pink-moon/</loc>
         <lastmod>2024-06-21</lastmod>
     </url>
     <url>
-        <loc>https://guillego.com/posts/ufo-landing-patch/</loc>
+        <loc>https://guillego.com/posts/2024-06-27-ufo-landing-patch/</loc>
         <lastmod>2024-06-27</lastmod>
     </url>
     <url>
-        <loc>https://guillego.com/posts/yet-another-blog/</loc>
-        <lastmod>2024-06-17</lastmod>
+        <loc>https://guillego.com/projects/</loc>
+    </url>
+    <url>
+        <loc>https://guillego.com/projects/sunflower/</loc>
+        <lastmod>2024-11-18</lastmod>
     </url>
     <url>
         <loc>https://guillego.com/tags/</loc>
@@ -61,6 +68,9 @@
     </url>
     <url>
         <loc>https://guillego.com/tags/plants/</loc>
+    </url>
+    <url>
+        <loc>https://guillego.com/tags/projects/</loc>
     </url>
     <url>
         <loc>https://guillego.com/tags/trains/</loc>
