@@ -153,13 +153,10 @@ You are free to:
 - Use the code commercially
 
 ### Content License
-© 2010 Guillermo Galán Olleros. All rights reserved.
+© 2010-2024 Guillermo Galán Olleros. 
+Content is licensed under [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
 
-All content in the `content/` directory and all images (including those in `static/img/`) are copyrighted. However, I'm happy to share with attribution for personal use! This includes:
-- Blog posts
-- Photography
-- Personal information
-- Site copy and text
+Content refers to all files in  `content/` directory and all images (including those in `static/img/`
 
 You are welcome to:
 - Quote or cite blog posts with attribution
