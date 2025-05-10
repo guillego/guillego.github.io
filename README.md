@@ -127,7 +127,7 @@ Each syndicated post includes:
 - Language tags
 - A permalink back to your original post on your website
 
-Thoughts are also included in your site's Atom feed at `/atom.xml`.
+Thoughts are also included in the site's Atom feed at `/thoughts/atom.xml`.
 
 ## Deployment
 The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.

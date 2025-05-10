@@ -67,6 +67,17 @@
          <link rel="icon" type="image/png" href={{ config.extra.favicon }} />
     {% endif %}
 
+    {# Feed autodiscovery #}
+    {% block feeds %}
+        {# Main site feed #}
+        <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+        
+        {# Section feed if we're in a section #}
+        {% if section %}
+            <link rel="alternate" type="application/atom+xml" title="{{ config.title }} - {{ section.title }} Atom Feed" href="{{ section.permalink }}atom.xml">
+        {% endif %}
+    {% endblock feeds %}
+
     {# opengraph, twitter_cards #}
 
     {% if config.extra.goatcounter %}

@@ -43,6 +43,9 @@ copyright = false
 
 goatcounter = "guillegos-sites"
 
+# Author name used in feed templates
+author = "guillego"
+
 # optional: config your i18n entry
 # [extra.translations]
 # languages = [{name = "en", url = "/"}]
