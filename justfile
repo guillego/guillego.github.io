@@ -29,3 +29,27 @@ album: create-dirs
         --max-width {{max_width}} \
         --quality {{quality}} \
         all
+
+# Create a new thought post
+# Usage examples:
+#   just thought "tag1,tag2" "Your thought content"
+#   just thought "tag1,tag2" "Your thought content" "en-US" "image.jpg" "Alt text for image"
+thought tags="" message="" language="" image="" alt="":
+    #!/usr/bin/env bash
+    cmd="./new-thought.sh"
+    if [ "{{tags}}" != "" ]; then
+        cmd="$cmd -t \"{{tags}}\""
+    fi
+    if [ "{{message}}" != "" ]; then
+        cmd="$cmd -m \"{{message}}\""
+    fi
+    if [ "{{language}}" != "" ]; then
+        cmd="$cmd -l \"{{language}}\""
+    fi
+    if [ "{{image}}" != "" ]; then
+        cmd="$cmd -i \"{{image}}\""
+        if [ "{{alt}}" != "" ]; then
+            cmd="$cmd -a \"{{alt}}\""
+        fi
+    fi
+    eval $cmd

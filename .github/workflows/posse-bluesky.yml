@@ -1,0 +1,47 @@
+name: POSSE to Bluesky
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/thoughts/**'
+
+jobs:
+  posse-bluesky:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Detect new or modified thoughts
+        id: detect-thoughts
+        run: |
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E '^content/thoughts/.*\.md$' | grep -v '_index.md' || echo "")
+          echo "files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "Found changes in the following thought files: $CHANGED_FILES"
+          else
+            echo "No changes in thought files detected."
+          fi
+
+      - name: Post to Bluesky
+        if: steps.detect-thoughts.outputs.files != ''
+        env:
+          BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BASE_URL: "https://guillego.com"
+          CHANGED_FILES: ${{ steps.detect-thoughts.outputs.files }}
+        run: uv run .github/scripts/post_to_bluesky.py 

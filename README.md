@@ -42,6 +42,93 @@ just process-album album-name # Process a single album
 just album # Process all albums
 ```
 
+### Thoughts (Microblogging)
+The site includes a microblogging feature called "Thoughts" that follows the POSSE (Publish on your Own Site, Syndicate Elsewhere) principle.
+
+#### Creating New Thoughts
+The easiest way to create thoughts is using the provided just recipe:
+```bash
+# Basic usage - opens your default editor to compose your thought
+just thought
+
+# With tags - add comma-separated tags
+just thought -t "tag1,tag2,thoughts"
+
+# Direct posting without opening editor
+just thought -m "This is my quick thought about something interesting!"
+
+# Auto-commit after creating the thought (uses jj for version control)
+just thought -m "Auto-commit this thought" -y
+
+# Show help for all options
+just thought -h
+```
+
+You can also create thoughts manually:
+1. Create a file in `content/thoughts/` with a name like `YYYY-MM-DD-some-description.md`
+2. Add the following frontmatter:
+```
++++
+date = YYYY-MM-DDThh:mm:ss+00:00
+[taxonomies]
+tags = ["tag1", "tag2"]
++++
+
+Your thought content here.
+```
+
+#### Advanced Thought Features
+
+##### Language Tags
+To specify the language of your thought for Bluesky syndication, add a `language` field to your frontmatter:
+
+```
++++
+date = YYYY-MM-DDThh:mm:ss+00:00
+[taxonomies]
+tags = ["tag1", "tag2"]
++++
+language = "en-US"  # Single language
+
+# Or multiple languages
+language = ["en-US", "es"]
+
+Your multilingual thought here.
+```
+
+##### Images
+You can attach images to your thoughts which will be syndicated to Bluesky (up to 4 images per thought):
+
+```
++++
+date = YYYY-MM-DDThh:mm:ss+00:00
+[taxonomies]
+tags = ["tag1", "tag2"]
++++
+# Simple way - just paths to images
+images = ["static/img/photo1.jpg", "static/img/photo2.png"]
+
+# With alt text for accessibility
+images = [
+  { path = "static/img/photo1.jpg", alt = "Description of first image" },
+  { path = "static/img/photo2.png", alt = "Description of second image" }
+]
+
+Your thought with images here.
+```
+
+#### Syndication
+When you push changes to the `main` branch, new or modified thoughts are automatically posted to:
+- Bluesky (via GitHub Actions using Python)
+
+Each syndicated post includes:
+- Your thought text (truncated to fit Bluesky's limits if necessary)
+- Any attached images (up to 4)
+- Language tags
+- A permalink back to your original post on your website
+
+Thoughts are also included in your site's Atom feed at `/atom.xml`.
+
 ## Deployment
 The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
