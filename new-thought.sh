@@ -191,7 +191,7 @@ EOF
 
 # Add language if provided
 if [ -n "$LANGUAGE_FORMATTED" ]; then
-  echo "language = ${LANGUAGE_FORMATTED}" >> "$TARGET_PATH"
+  echo "language = [${LANGUAGE_FORMATTED}]" >> "$TARGET_PATH"
 fi
 
 # Add images if provided
