@@ -1,36 +1,49 @@
 {% extends "base.html" %}
 
 {% block main_content %}
-<main class="list">
+<main class="home">
     <div class="site-description">
         {% if config.description %}
             {{ config.description | markdown | safe }}
         {% endif %}
     </div>
 
-    {%- if paginator %}
-        {%- set show_pages = paginator.pages -%}
-    {% else %}
-        {% set section = get_section(path="posts/_index.md") %}
-        {%- set show_pages = section.pages -%}
-    {% endif -%}
-
-    {{ post_macros::list_posts(pages=show_pages, extra=config.extra) }}
+    <section class="welcome">
+        <div class="intro">
+            <p>Hi there! I'm Guillermo, known as guillego in some places around the internet. This is my personal website where I share my <a href="/thoughts">thoughts</a>, <a href="/projects">projects</a>, <a href="/photography">photography</a>, and more.</p>
+            
+            <p>You can also learn more <a href="/about">about me</a> or explore by <a href="/tags">tags</a>.</p>
+        </div>
+        
+        <div class="recent-content">
+            <h2><a href="/thoughts">Recent Thoughts</a></h2>
+            {% set thoughts = get_section(path="thoughts/_index.md") %}
+            {% set recent_thoughts = thoughts.pages | slice(end=3) %}
+            
+            <ul class="recent-list">
+            {% for thought in recent_thoughts %}
+                <li>
+                    <a href="{{ thought.permalink }}">{{ thought.content | striptags | truncate(length=80) }}</a>
+                    <span class="date">{{ thought.date | date(format="%Y-%m-%d") }}</span>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="recent-content">
+            <h2><a href="/posts">Recent Posts</a></h2>
+            {% set section = get_section(path="posts/_index.md") %}
+            {% set recent_posts = section.pages | slice(end=3) %}
+            
+            <ul class="recent-list">
+            {% for post in recent_posts %}
+                <li>
+                    <a href="{{ post.permalink }}">{{ post.title }}</a>
+                    <span class="date">{{ post.date | date(format="%Y-%m-%d") }}</span>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </section>
 </main>
-
-{% if paginator %}
-    <ul class="pagination">
-        {% if paginator.previous %}
-            <span class="page-item page-prev">
-                <a href={{ paginator.previous }} class="page-link" aria-label="Previous"><span aria-hidden="true">{{ config.extra.translations[lang][0].previous_page }}</span></a>
-            </span>
-        {% endif %}
-
-        {% if paginator.next %}
-            <span class="page-item page-next">
-                <a href={{ paginator.next }} class="page-link" aria-label="Next"><span aria-hidden="true">{{ config.extra.translations[lang][0].next_page }}</span></a>
-            </span>
-        {% endif %}
-    </ul>
-{% endif %}
 {% endblock main_content %}

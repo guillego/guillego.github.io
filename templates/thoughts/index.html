@@ -8,6 +8,8 @@
         {% endif %}
     </div>
 
+    <div class="thoughts-intro-divider">* * *</div>
+
     <div class="thoughts">
         {% for thought in section.pages %}
             <article class="thought">
@@ -28,7 +30,7 @@
                 </div>
             </article>
             {% if not loop.last %}
-                <hr class="thought-divider">
+                <div class="thoughts-separator"></div>
             {% endif %}
         {% endfor %}
     </div>
