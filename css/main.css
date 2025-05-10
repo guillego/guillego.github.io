@@ -21,10 +21,10 @@
 
     /* Font family variables */
     --heading-font: 'Plush', serif;
-    --body-font: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;    --code-font: 'IBM Plex Mono', monospace;
+    --body-font: 'Plush', serif;
+    --code-font: 'IBM Plex Mono', monospace;
     --nav-font: 'Plush', serif;
-    --meta-font: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-
+    --meta-font: 'Plush', serif;
 
     /* Font sizes */
     --homepage-font-size: 16px;
@@ -701,6 +701,10 @@ table td {
     content: none !important;
 }
 
+.no-dot::before {
+    content: none !important;
+}
+
 nav {
     font-family: var(--heading-font);
     font-weight: 400;
@@ -772,7 +776,7 @@ nav a {
 }
 
 .thought {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .thought-content {
@@ -825,4 +829,247 @@ nav a {
 
 .single-thought {
     margin-top: 2rem;
+}
+
+/* Home page styles */
+main.home {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main.home .intro {
+    margin-bottom: 2rem;
+}
+
+main.home .intro p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+main.home .intro a {
+    border-bottom: 1px solid var(--lightMainColor);
+}
+
+main.home .intro a:hover {
+    background-color: transparent;
+    color: var(--lightMainColor);
+}
+
+main.home .recent-content {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+main.home .recent-content h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+}
+
+main.home .recent-content h2::before {
+    content: "";
+}
+
+main.home .recent-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+main.home .recent-list li {
+    margin-bottom: 0.8rem;
+    text-indent: 0;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 2px solid var(--lightBorderColor);
+}
+
+main.home .recent-list li::before {
+    content: none;
+}
+
+main.home .recent-list a {
+    text-decoration: none;
+    color: var(--heading);
+    font-weight: normal;
+    border-bottom: none;
+    display: block;
+}
+
+main.home .recent-list a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: var(--lightMainColor);
+}
+
+main.home .recent-list .date {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--lightTextColor);
+    opacity: 0.8;
+}
+
+main.home .recent-content p:last-child {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+main.home .recent-content p:last-child a {
+    border-bottom: none;
+}
+
+main.home .recent-content p:last-child a:hover {
+    background-color: transparent;
+    color: var(--lightMainColor);
+    text-decoration: underline;
+}
+
+main.home .recent-content h2 a {
+    text-decoration: none;
+    border-bottom: none;
+    color: inherit;
+}
+
+main.home .recent-content h2 a:hover {
+    color: var(--lightMainColor);
+    background-color: transparent;
+}
+
+/* Blog list styling */
+main.list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main.list .page-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+main.list .section-description {
+    margin-bottom: 2rem;
+}
+
+main.list ul {
+    padding-left: 0;
+}
+
+main.list .list-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+main.list .list-item .title {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0;
+}
+
+main.list .list-item .title a {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+main.list .list-item .title a:hover {
+    background-color: transparent;
+    color: var(--lightMainColor);
+    text-decoration: underline;
+}
+
+main.list .list-item time, 
+main.list .list-item span {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+main.list .list-item .description {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+main.list .list-item .readmore {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+main.list .list-item .readmore:hover {
+    background-color: transparent;
+    color: var(--lightMainColor);
+    text-decoration: underline;
+}
+
+main.home .welcome h1 {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+main.home .welcome h2 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+main.home .recent-list li {
+    text-indent: 0;
+}
+
+main.home .recent-list li::before {
+    content: none;
+}
+
+/* Make recent thoughts look nice */
+main.home .recent-list a {
+    border-bottom: none;
+}
+
+main.home .recent-list a:hover {
+    background-color: transparent;
+    color: var(--lightMainColor);
+    text-decoration: underline;
+}
+
+/* Improved thoughts separators */
+.thoughts-intro-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    color: var(--lightMainColor);
+    letter-spacing: 0.5em;
+}
+
+.thoughts-separator {
+    border-top: 1px dotted var(--lightBorderColor);
+    margin: 1.2rem 0;
+    opacity: 0.7;
+    height: 1px;
+}
+
+/* ASCII separator styling */
+.ascii-separator {
+    color: var(--lightTextColor);
+    text-align: center;
+    margin: 2em auto;
+    line-height: 1;
+    letter-spacing: 0.5em;
+    font-size: 1.1em;
+    max-width: 60%;
+}
+
+/* Remove styling for the old divider since we're not using it anymore */
+.thought-divider {
+    border: 0;
+    border-top: 3px dotted var(--lightBorderColor);
+    margin: 1em 0;
 }
