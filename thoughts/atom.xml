@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>guillego</title>
+	
+	<link href="https://guillego.com/atom.xml" rel="self" type="application/atom+xml"/>
+	<link href="https://guillego.com/" rel="alternate" type="text/html"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2025-05-10T15:16:08+00:00</updated>
+	<id>https://guillego.com/atom.xml</id>
+	
+		<author>
+			<name>guillego</name>
+		</author>
+	
+	
+		<entry xml:lang="en">
+			<title>First post using POSSE (post once, syndicate everywhere). Should appear...</title>
+			<published>2025-05-10T15:16:08+00:00</published>
+			<updated>2025-05-10T15:16:08+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;thoughts&#x2F;2025&#x2F;05&#x2F;10&#x2F;first-post-using-posse&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;thoughts&#x2F;2025&#x2F;05&#x2F;10&#x2F;first-post-using-posse&#x2F;</id>
+			<content type="html">&lt;p&gt;First post using POSSE (post once, syndicate everywhere). Should appear in guillego.com and bsky&lt;&#x2F;p&gt;
+</content>
+			
+				
+					<category term="test"/>
+				
+					<category term="posse"/>
+				
+			
+		</entry>
+	
+</feed> 

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>guillego</title>
+	
+	<link href="https://guillego.com/atom.xml" rel="self" type="application/atom+xml"/>
+	<link href="https://guillego.com/" rel="alternate" type="text/html"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2025-05-10T15:16:08+00:00</updated>
+	<id>https://guillego.com/atom.xml</id>
+	
+		<author>
+			<name>guillego</name>
+		</author>
+	
+	
+		<entry xml:lang="en">
+			<title>First post using POSSE (post once, syndicate everywhere). Should appear...</title>
+			<published>2025-05-10T15:16:08+00:00</published>
+			<updated>2025-05-10T15:16:08+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;thoughts&#x2F;2025&#x2F;05&#x2F;10&#x2F;first-post-using-posse&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;thoughts&#x2F;2025&#x2F;05&#x2F;10&#x2F;first-post-using-posse&#x2F;</id>
+			<content type="html">&lt;p&gt;First post using POSSE (post once, syndicate everywhere). Should appear in guillego.com and bsky&lt;&#x2F;p&gt;
+</content>
+			
+				
+					<category term="test"/>
+				
+					<category term="posse"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>About</title>
+			<published>2025-01-23T00:00:00+00:00</published>
+			<updated>2025-01-23T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;about&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;about&#x2F;</id>
+			<content type="html">&lt;img src=&quot;&#x2F;img&#x2F;profile.jpeg&quot; height=&quot;256&quot; alt=&quot;Profile photo&quot;&gt;
+&lt;p&gt;Hi!&lt;&#x2F;p&gt;
+&lt;p&gt;I’m Guille. You may also know me as guillego or iamsiesta.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m a &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;guillermo-go&#x2F;&quot;&gt;telecom-turned-biomedical-turned-software engineer&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Born and raised in Madrid, Spain, moved to Copenhagen a few years ago, where my favorite things are cycling through the city,
+jumping into the sea, eating pastries and the long days of summer.&lt;&#x2F;p&gt;
+&lt;p&gt;Professionally, these days I&#x27;m working across the stack (Rust&#x2F;React) in the SaaS world, reducing the friction and manual process of compliance for large companies. I&#x27;m particularly attracted to distributed systems and have found a lot of joy when working with Elixir and most recently in Go and Rust. I&#x27;m also genuinely curious about the electric grid and how to share&#x2F;distribute electricity in a less centralized manner.&lt;&#x2F;p&gt;
+&lt;p&gt;In the past couple of years I spent some time building a distributed IoT sports camera system and developing a computer vision virtual coach for racket sports at a Copenhagen startup.
+Previously spent a few years in the health-tech domain, augmenting radiology at &lt;a href=&quot;https:&#x2F;&#x2F;radiobotics.com&quot;&gt;Radiobotics&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I like to &lt;a href=&quot;https:&#x2F;&#x2F;instagram.com&#x2F;iamsiesta&#x2F;&quot;&gt;capture life with my camera&lt;&#x2F;a&gt;, take trips on my bike, rock climb and write.&lt;&#x2F;p&gt;
+&lt;p&gt;I devour podcasts, books, wikipedia, blogs and any source of interesting information. Is there such thing as being too curious?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;find-me&quot;&gt;Find me&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;guillermo-go&#x2F;&quot;&gt;Guillermo Galan Olleros&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;guillego&quot;&gt;guillego&lt;&#x2F;a&gt; on GitHub&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;guillego.com&quot;&gt;@guillego.com&lt;&#x2F;a&gt; on bluesky&lt;&#x2F;li&gt;
+&lt;li&gt;Message me: mail [in-the-mailbox-of] guillego.com&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>sunflower cam</title>
+			<published>2024-11-18T00:00:00+00:00</published>
+			<updated>2024-11-18T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;projects&#x2F;sunflower&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;projects&#x2F;sunflower&#x2F;</id>
+			<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sunflower.guillego.com&#x2F;&quot;&gt;a sunflower grows in Østerbro (external)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I made this small project in the fall of 2024, when I faced the prospect of traveling away from my apartment for nearly a month while my sunflower blossomed. I had been working on a Raspberry Pi-based sports camera during the previous year so it seemed very natural to set up a &lt;abbr title=&quot;RPi4 board + RPiCam v3&quot;&gt;little camera&lt;&#x2F;abbr&gt; to take a photo every hour as the flower grew and blossomed.&lt;&#x2F;p&gt;
+&lt;p&gt;It took an evening to set up and brought me great joy in the following month, read more in the about section of the site.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image-grid &quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-11-18-sunflower.jpg&quot; alt=&quot;sunflower blossoming&quot;&gt;
+    
+&lt;&#x2F;div&gt;</content>
+			
+				
+					<category term="personal"/>
+				
+					<category term="projects"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>the ufo landing patch</title>
+			<published>2024-06-27T00:00:00+00:00</published>
+			<updated>2024-06-27T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-27-ufo-landing-patch&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-27-ufo-landing-patch&#x2F;</id>
+			<content type="html">&lt;p&gt;Some say it&#x27;s easier to imagine the collapse of our ecosystems, than the collapse of extractive capitalism.
+Some say it&#x27;s easier to imagine steel and glass jungles populated by self driving cars than forested jungles where humans can thrive.
+Some say it&#x27;s easier to imagine humanity moving to Mars than humans in a healthy Earth. And some say that there should be less of us, since we can&#x27;t share with those that are here today.&lt;&#x2F;p&gt;
+&lt;p&gt;Sometimes these voices seem so loud and no alternative is in sight. Despair takes over me and I feel like giving up. On times like this, I need to remember the hands that rewilded a UFO landing patch.&lt;&#x2F;p&gt;
+&lt;p&gt;You see, I have seen miracles happening on a disc-shaped barren patch of land. A single pair of human hands I have seen working together with Persephone to sow and to grow. Working together with the wind and the rain to nurture and spread. A single human I have seen, rewilding the world with the colours of her heart. And day by day, pouring love onto this patch: sowing, watering, watching, waiting.&lt;&#x2F;p&gt;
+&lt;p&gt;And isn&#x27;t this what hope looks like? To believe that we can ally ourselves with the bees and the pollinisers to spread life around. With the minerals in the soil and the water from the rain, so that life can emerge. And to yearn for the day, when the first sprouts start popping their heads, lifting the soil from underneath, with the strength of birth to emerge into the light.&lt;&#x2F;p&gt;
+&lt;p&gt;To see those greens take shape and form day by day. To guess where the wild colours will emerge. A poppy drawing your eyes here, some marigolds shining there and when you come back after some weeks to see a pink carpet of toadflax and cow cockles covering the soil.&lt;&#x2F;p&gt;
+&lt;p&gt;These hands can imagine the future of this patch and the small ecosystems that could emerge. These hands can collaborate with the forces of nature. And if these hands can work for a future, so can mine, so can yours.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image-grid &quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-27-flower1.jpg&quot; alt=&quot;you came to take us&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-27-flower2.jpg&quot; alt=&quot;all things grow&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-27-flower3.jpg&quot; alt=&quot;all things grow&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-27-flower4.jpg&quot; alt=&quot;to recreate us&quot;&gt;
+    
+&lt;&#x2F;div&gt;</content>
+			
+				
+					<category term="personal"/>
+				
+					<category term="nature"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>pink moon</title>
+			<published>2024-06-21T00:00:00+00:00</published>
+			<updated>2024-06-21T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-21-pink-moon&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-21-pink-moon&#x2F;</id>
+			<content type="html">&lt;p&gt;&lt;em&gt;captured in December 2019&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;div class=&quot;image-grid wide&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-21-pink-moon.jpg&quot; alt=&quot;pink, pink, pink, pink, pink moon&quot;&gt;
+    
+&lt;&#x2F;div&gt;</content>
+			
+				
+					<category term="photography"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>Europe&#x27;s trains - part 1</title>
+			<published>2024-06-20T00:00:00+00:00</published>
+			<updated>2024-06-20T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-20-europes-trains-part-1&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-20-europes-trains-part-1&#x2F;</id>
+			<content type="html">&lt;p&gt;Some years ago I moved from Madrid to Copenhagen, and for many years the only way I traveled or thought about traveling between these two cities was by plane.
+Copenhagen&#x27;s airport is fairly close to the city and it would take me around 5-6h, door to door to do this trip.&lt;&#x2F;p&gt;
+&lt;p&gt;Last winter I tried something different: I took the train. It&#x27;s a bit of a crazy journey but a trainfluencer showed me that it was possible and I had the incentive to make some stops along the way this time.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-journey&quot;&gt;The journey&lt;a class=&quot;anchor-link&quot; href=&quot;#the-journey&quot; aria-label=&quot;Anchor link for: the-journey&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;First I traveled from Copenhagen to Bern, that took one day of travel (Copenhagen-Hamburg-Basel-Bern) and around 13h. Perhaps a bit more since my first train (Copenhagen-Hamburg) was delayed and I had to take a later connection.
+Save for that, the rides were pleasant and the winter landscapes very beautiful to see. I enjoyed working, reading and napping on the train.&lt;&#x2F;p&gt;
+&lt;p&gt;After a few days in Switzerland I took the train from Bern (actually from Freibourg) and traveled to Barcelona (Freibourg-Geneve-Lyon-Barcelona) in around 11h, this day was really smooth and the landscapes were even more beautiful than on the previous journey.
+Internet connection in the mountainous stretch between Geneva and Lyon was not the best, but one could work otherwise.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, after a few days with colleagues in Barcelona, I took a high speed train to Madrid, which took about 2.5h.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;further-thoughts&quot;&gt;Further thoughts&lt;a class=&quot;anchor-link&quot; href=&quot;#further-thoughts&quot; aria-label=&quot;Anchor link for: further-thoughts&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;When thinking about rail travel in Europe, there are many more things that need to improve, the biggest I can think of are better prices and better&#x2F;faster routes.
+It&#x27;s quite outrageous how rail travel is extremely expensive compared to low-cost flights for the same routes. So I&#x27;d like to dive deeper into why and how it could be fixed in a future post.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Some photos taken from the train (Dec 2023&#x2F;Jan 2024)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;div class=&quot;image-grid &quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-20-trains-2.jpg&quot; alt=&quot;deep beneath the cover&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-20-trains-1.jpg&quot; alt=&quot;of another perfect wonder&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-20-trains-3.jpg&quot; alt=&quot;when it&amp;#x27;s so white as snow&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-20-trains-5.jpg&quot; alt=&quot;running through the fields&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-20-trains-4.jpg&quot; alt=&quot;where all my tracks will be concealed&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-20-trains-6.jpg&quot; alt=&quot;and there is no place to go&quot;&gt;
+    
+&lt;&#x2F;div&gt;</content>
+			
+				
+					<category term="travel"/>
+				
+					<category term="trains"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>croissant cycling trip - part 1</title>
+			<published>2024-06-19T00:00:00+00:00</published>
+			<updated>2024-06-19T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-19-croissant-cycling-trip-part-1&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-19-croissant-cycling-trip-part-1&#x2F;</id>
+			<content type="html">&lt;p&gt;For a few years now, I&#x27;ve enjoyed cycling as a hobby and bikepacking as a favorite way of traveling.
+This year brought a big break from work where both Carole and I were free. She had never done a bike trip before,
+but curious to explore the lifestyle for herself, she suggested that we travel from Switzerland to Spain and thus the trip was born.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-itinerary&quot;&gt;The itinerary&lt;a class=&quot;anchor-link&quot; href=&quot;#the-itinerary&quot; aria-label=&quot;Anchor link for: the-itinerary&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Ideally we would travel from Carole&#x27;s hometown to mine, but time constraints due to other commitments left us with 22 days.
+Therefore we decided to cover the distance between Gurmels (close to Bern) and San Sebastián, and since we wanted this to be a holiday, we planned some train time to skip over some parts of the route so that we would have time to enjoy, rest and explore nature instead of just following the most optimal path.&lt;&#x2F;p&gt;
+&lt;p&gt;Our route ended up like this:&lt;&#x2F;p&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;www.komoot.com&#x2F;collection&#x2F;2825054&#x2F;embed&quot; width=&quot;100%&quot; height=&quot;512&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;&#x2F;iframe&gt;
+&lt;h3 id=&quot;food&quot;&gt;Food&lt;a class=&quot;anchor-link&quot; href=&quot;#food&quot; aria-label=&quot;Anchor link for: food&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Most of the time we cooked: oats for breakfast, bread with spreads&amp;amp;cheese for lunch and some camping meal for dinner.
+We also snacked on plenty of croissants and other goodies we found in Boulangeries along the way.
+Won&#x27;t list all the food we carried, but it got a bit crazy sometimes:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;2024&#x2F;2024-06-19-bikepacking-food.jpg&quot; alt=&quot;food on the second week&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;gear-list&quot;&gt;Gear list&lt;a class=&quot;anchor-link&quot; href=&quot;#gear-list&quot; aria-label=&quot;Anchor link for: gear-list&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Not exhaustive, but most of the important items are listed:&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;camping-gear&quot;&gt;Camping gear&lt;a class=&quot;anchor-link&quot; href=&quot;#camping-gear&quot; aria-label=&quot;Anchor link for: camping-gear&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;2 person tent: MSR Hubba Hubba NX2&lt;&#x2F;li&gt;
+&lt;li&gt;Down sleeping bag. Comfort ~0 ºC (2x)&lt;&#x2F;li&gt;
+&lt;li&gt;Therm-a-rest sleeping pad (2x)&lt;&#x2F;li&gt;
+&lt;li&gt;Camping pillow (1x)&lt;&#x2F;li&gt;
+&lt;li&gt;Head lamps&lt;&#x2F;li&gt;
+&lt;li&gt;Camping stove and pots&lt;&#x2F;li&gt;
+&lt;li&gt;Camping gas and matches&lt;&#x2F;li&gt;
+&lt;li&gt;Pocket knife&lt;&#x2F;li&gt;
+&lt;li&gt;Swiss knife&lt;&#x2F;li&gt;
+&lt;li&gt;Camping plates &amp;amp; sporks&lt;&#x2F;li&gt;
+&lt;li&gt;A couple plastic tupperwares&lt;&#x2F;li&gt;
+&lt;li&gt;Dish soap and sponges&lt;&#x2F;li&gt;
+&lt;li&gt;Body soap &amp;amp; shampoo&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;clothes-guille&quot;&gt;Clothes (Guille)&lt;a class=&quot;anchor-link&quot; href=&quot;#clothes-guille&quot; aria-label=&quot;Anchor link for: clothes-guille&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Bib shorts&lt;&#x2F;li&gt;
+&lt;li&gt;Summer cycling jersey&lt;&#x2F;li&gt;
+&lt;li&gt;Merino cycling jersey (short sleeves)&lt;&#x2F;li&gt;
+&lt;li&gt;2x cycling socks&lt;&#x2F;li&gt;
+&lt;li&gt;3x boxer briefs&lt;&#x2F;li&gt;
+&lt;li&gt;Bathing suit&lt;&#x2F;li&gt;
+&lt;li&gt;Microfiber towel&lt;&#x2F;li&gt;
+&lt;li&gt;Wool socks (sleeping)&lt;&#x2F;li&gt;
+&lt;li&gt;Merino baselayer (camping&#x2F;sleeping)&lt;&#x2F;li&gt;
+&lt;li&gt;Sports shorts&lt;&#x2F;li&gt;
+&lt;li&gt;Hiking&#x2F;leisure technical pants&lt;&#x2F;li&gt;
+&lt;li&gt;White t-shirt&lt;&#x2F;li&gt;
+&lt;li&gt;Overshirt and casual shorts&lt;&#x2F;li&gt;
+&lt;li&gt;Salomon trail running shoes (cycling shoe)&lt;&#x2F;li&gt;
+&lt;li&gt;Sandals (Tevas)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;other-gear&quot;&gt;Other gear&lt;a class=&quot;anchor-link&quot; href=&quot;#other-gear&quot; aria-label=&quot;Anchor link for: other-gear&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;20k mAh power bank&lt;&#x2F;li&gt;
+&lt;li&gt;Power adapter&lt;&#x2F;li&gt;
+&lt;li&gt;Cables&lt;&#x2F;li&gt;
+&lt;li&gt;Film camera&lt;&#x2F;li&gt;
+&lt;li&gt;Phones&lt;&#x2F;li&gt;
+&lt;li&gt;Peak design outfront bike mount&lt;&#x2F;li&gt;
+&lt;li&gt;Mirrorless camera, batteries, SD cards&lt;&#x2F;li&gt;
+&lt;li&gt;Bike multitool&lt;&#x2F;li&gt;
+&lt;li&gt;Patch kit, tyre levers &amp;amp; spare tubes&lt;&#x2F;li&gt;
+&lt;li&gt;Notebooks, pens&lt;&#x2F;li&gt;
+&lt;li&gt;Toilet paper&lt;&#x2F;li&gt;
+&lt;li&gt;Baby wipes&lt;&#x2F;li&gt;
+&lt;li&gt;Sunscreen&lt;&#x2F;li&gt;
+&lt;li&gt;Body lotion&lt;&#x2F;li&gt;
+&lt;li&gt;Tampons, pads&lt;&#x2F;li&gt;
+&lt;li&gt;Hand sanitizer&lt;&#x2F;li&gt;
+&lt;li&gt;Toothbrush, toothpaste&lt;&#x2F;li&gt;
+&lt;li&gt;electrolyte tablets&lt;&#x2F;li&gt;
+&lt;li&gt;first aid kit, med kit&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In the next few weeks I&#x27;ll post in more detail the adventures that we went through, stay tuned.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image-grid &quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-19-bikepacking-sea.jpg&quot; alt=&quot;happy bikepackers by the sea&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-19-bikepacking-hills.jpg&quot; alt=&quot;rolling hills and mountains&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-19-bikepacking-rain.jpg&quot; alt=&quot;happy bikepackers in the rain&quot;&gt;
+    
+&lt;&#x2F;div&gt;</content>
+			
+				
+					<category term="cycling"/>
+				
+					<category term="travel"/>
+				
+					<category term="gear"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>botany</title>
+			<published>2024-06-18T00:00:00+00:00</published>
+			<updated>2024-06-18T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-18-botany&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-18-botany&#x2F;</id>
+			<content type="html">&lt;p&gt;Today, in the quiet hours of the morning, sunlight and birdsong started filling the streets. It was far too early for anyone to notice, but today, like many summer mornings in Copenhagen,
+light leaked at first and then flowed through the east-facing windows of my living room. It bathed the room in orange and yellow light
+and washed all over the big, green plants that populate my apartment, who enjoyed this quiet festival while most of us slept.&lt;&#x2F;p&gt;
+&lt;p&gt;Of course I don&#x27;t notice this until hours later when I wake up and wander into the living room. It&#x27;s the kind of
+morning when I&#x27;m still a bit in awe at all the life and light before me, especially because my yesterday self took
+the time to tidy up before going to bed.&lt;&#x2F;p&gt;
+&lt;p&gt;The plants look vibrant and thriving in this season. On one corner lives a lush ficus robusta that has stayed in various
+corners of the room and thus has grown a contorted torso in its seeking to bend towards the light.
+The tallest had a hard time this winter before moving homes and lost all its leaves. Seeing it,
+one could be forgiven for thinking that it wouldn&#x27;t make it past December.
+Not knowing what to do, I left for the holidays and hoped for the best.
+Turns out it only needed space and time to be still,
+and when I came back in January, bright leaves greeted me as they made their way through the bark.&lt;&#x2F;p&gt;
+&lt;p&gt;My house is populated by many other leafy beings: some monsteras, a philodendron, tradescantia and alocasia zebrinas, and even a blue star fern that moved in last winter.
+Long before many of those, there was the lemon tree. The lemon tree sits by the window with no shade other than the one provided by the Danish clouds.
+Standing just under a meter from the base of its pot, it&#x27;s more of a companion tree than an orchard tree.&lt;&#x2F;p&gt;
+&lt;p&gt;Throughout our four years together, it has grown dozens of leaves, some flowers and one lemon.
+Every winter, the lemon tree disposes of all its leaves, sitting bare by the window, leaving me wondering if it&#x27;s finally giving up on this dark environment or merely resting for a bit.
+After those months that seem to stretch without end, bits of green start to sprout, spring brings new growth from its branches, and every summer blooming flowers.&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t know a lot about botany, but I know enough to know that I love this lemon tree.
+I like to observe how it behaves and learn from how it adapts, and how it waits patiently for the spring. I find myself just wanting to help it thrive, on its own terms, not mine.
+I don&#x27;t know much about anthropology either, but I know enough to know that I wish this is how humans behaved towards each other and ourselves.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;2024&#x2F;2024-06-18-lemon-tree.jpg&quot; alt=&quot;just a yellow lemon tree&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+			
+				
+					<category term="personal"/>
+				
+					<category term="plants"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>yet another blog</title>
+			<published>2024-06-17T00:00:00+00:00</published>
+			<updated>2024-06-17T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-17-yet-another-blog&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;posts&#x2F;2024-06-17-yet-another-blog&#x2F;</id>
+			<content type="html">&lt;p&gt;Many times in my life I have tried to start a blog, and failed to keep up with it. Often times it was this voice inside that told me that I didn&#x27;t have anything interesting to say, or that
+it was too personal, or that there were too many things I was not doing well in my life, so I didn&#x27;t need to expose myself more.
+My general response to those voices, and to many others is to try to shut them down by avoiding doing whatever it is that triggers them. It&#x27;s some sort of feeling between fear and shame,
+a little monster creature that I didn&#x27;t want to name.&lt;&#x2F;p&gt;
+&lt;p&gt;I recently started reading &lt;a href=&quot;https:&#x2F;&#x2F;app.thestorygraph.com&#x2F;books&#x2F;c2ea6d65-b7be-46cc-852b-195205397e31&quot;&gt;Daring greatly, by Brené Brown&lt;&#x2F;a&gt; and it inspired me to start naming
+these gremlins. Mainly for my own sake, but perhaps someone out there feels a little more power over their own gremlins now that they&#x27;ve been named here.&lt;&#x2F;p&gt;
+&lt;p&gt;In the next few weeks I want to get into the flow of posting here about the things that I find inspiring&#x2F;interesting or just as a public log of a day&#x2F;activity.&lt;&#x2F;p&gt;
+&lt;p&gt;Feel free to come along for the ride, and let me know if you find anything interesting&#x2F;inspiring or if you want to chat!&lt;&#x2F;p&gt;
+&lt;div class=&quot;image-grid &quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-17-wheat.jpg&quot; alt=&quot;wheat in the sun&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-17-silhouette.jpg&quot; alt=&quot;self portrait silhouette&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-17-shine.jpg&quot; alt=&quot;shine a light&quot;&gt;
+    
+        &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;2024&amp;#x2F;2024-06-17-poppy.jpg&quot; alt=&quot;poppy in the sun&quot;&gt;
+    
+&lt;&#x2F;div&gt;</content>
+			
+				
+					<category term="personal"/>
+				
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>frozen nordhavn</title>
+			<published>2021-02-15T00:00:00+00:00</published>
+			<updated>2021-02-15T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;photography&#x2F;frozen-nordhavn&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;photography&#x2F;frozen-nordhavn&#x2F;</id>
+			<content type="html">&lt;p&gt;It was one of those rare winter mornings in Copenhagen when the darkness finally surrenders—if only briefly—to something miraculous. Dawn arrived like spilled watercolors, orange and pink light pouring through my apartment windows, and I couldn&#x27;t help but smile upon opening my eyes—what a gift!&lt;&#x2F;p&gt;
+&lt;p&gt;I threw on some warm layers, fingers fumbling with excitement as I found my camera. The bike ride to Nordhavn was a blur of condensed breath and squeaky tires on frost, my heart already knowing what awaited. There, where the city meets the sea, I found what I&#x27;d hoped for: that fleeting moment when the Danish winter, prone to being gloomy and gray, opens like a crisp and colorful love letter to all who are up in the early, quiet hours of the morning.&lt;&#x2F;p&gt;
+</content>
+			
+		</entry>
+	
+</feed> 
