@@ -17,6 +17,10 @@ theme = "archioki"
 
 taxonomies = [{ name = "tags" }]
 
+# Define allowed extra variables in front matter that aren't taxonomies
+[extra.extra]
+images = true
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola

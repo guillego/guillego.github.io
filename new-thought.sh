@@ -179,13 +179,14 @@ SLUG=$(create_slug "$FIRST_WORDS")
 FILENAME="${DATE_SLUG}-${SLUG}.md"
 TARGET_PATH="content/thoughts/$FILENAME"
 
-# Create the frontmatter and file
+# Create the frontmatter start
 cat > "$TARGET_PATH" << EOF
 +++
 date = ${TIMESTAMP}
 [taxonomies]
 tags = [${TAGS_FORMATTED}]
-+++
+
+[extra]
 EOF
 
 # Add language if provided
@@ -195,8 +196,11 @@ fi
 
 # Add images if provided
 if [ -n "$IMAGES_FORMATTED" ]; then
-  echo "images = ${IMAGES_FORMATTED}" >> "$TARGET_PATH"
+  echo -e "images = ${IMAGES_FORMATTED}" >> "$TARGET_PATH"
 fi
+
+# Close the frontmatter
+echo "+++" >> "$TARGET_PATH"
 
 # Add blank line and content
 echo "" >> "$TARGET_PATH"
