@@ -1,5 +1,6 @@
 +++
-date = 2025-05-10T14:58:39+00:00
+date = 2025-05-10T15:16:08+00:00
+path = "thoughts/2025/05/10/first-post-using-posse"
 [taxonomies]
 tags = ["test", "posse"]
 

@@ -175,6 +175,11 @@ FIRST_LINE=$(echo "$CONTENT" | head -n 1)
 FIRST_WORDS=$(echo "$FIRST_LINE" | awk '{print $1" "$2" "$3" "$4}')
 SLUG=$(create_slug "$FIRST_WORDS")
 
+# Extract year, month, day for path creation
+YEAR=$(date +"%Y")
+MONTH=$(date +"%m")
+DAY=$(date +"%d")
+
 # Create filename with date and slug
 FILENAME="${DATE_SLUG}-${SLUG}.md"
 TARGET_PATH="content/thoughts/$FILENAME"
@@ -183,6 +188,7 @@ TARGET_PATH="content/thoughts/$FILENAME"
 cat > "$TARGET_PATH" << EOF
 +++
 date = ${TIMESTAMP}
+path = "thoughts/${YEAR}/${MONTH}/${DAY}/${SLUG}"
 [taxonomies]
 tags = [${TAGS_FORMATTED}]
 
