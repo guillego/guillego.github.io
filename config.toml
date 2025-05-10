@@ -53,6 +53,7 @@ posted_by = "Published by"
 read_time = "minute read"
 all_tags = "All tags"
 menus = [
+    { name = "thoughts", url = "/thoughts", weight = 1 },
     { name = "photography", url = "/photography", weight = 2 },
     { name = "projects", url = "/projects", weight = 3 },
     { name = "about", url = "/about", weight = 4 },

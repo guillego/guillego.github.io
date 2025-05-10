@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main class="thoughts-list">
+    <div class="site-description">
+        {% if section.content %}
+            {{ section.content | safe }}
+        {% endif %}
+    </div>
+
+    <div class="thoughts">
+        {% for thought in section.pages %}
+            <article class="thought">
+                <div class="thought-content">
+                    {{ thought.content | safe }}
+                </div>
+                <div class="thought-meta">
+                    <a href="{{ thought.permalink }}" class="thought-permalink">
+                        <time datetime="{{ thought.date }}">{{ thought.date | date(format="%Y-%m-%d %H:%M") }}</time>
+                    </a>
+                    {% if thought.taxonomies.tags %}
+                        <div class="tags">
+                            {% for tag in thought.taxonomies.tags %}
+                                <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">#{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </article>
+            {% if not loop.last %}
+                <hr class="thought-divider">
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% if paginator %}
+        <ul class="pagination">
+            {% if paginator.previous %}
+                <span class="page-item page-prev">
+                    <a href={{ paginator.previous }} class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">{{ config.extra.translations[lang][0].previous_page }}</span>
+                    </a>
+                </span>
+            {% endif %}
+
+            {% if paginator.next %}
+                <span class="page-item page-next">
+                    <a href={{ paginator.next }} class="page-link" aria-label="Next">
+                        <span aria-hidden="true">{{ config.extra.translations[lang][0].next_page }}</span>
+                    </a>
+                </span>
+            {% endif %}
+        </ul>
+    {% endif %}
+</main>
+{% endblock main_content %} 

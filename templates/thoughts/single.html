@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main class="single-thought">
+    <article class="thought">
+        <div class="thought-content">
+            {{ page.content | safe }}
+        </div>
+        <div class="thought-meta">
+            <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d %H:%M") }}</time>
+            {% if page.taxonomies.tags %}
+                <div class="tags">
+                    {% for tag in page.taxonomies.tags %}
+                        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </article>
+</main>
+{% endblock main_content %} 
