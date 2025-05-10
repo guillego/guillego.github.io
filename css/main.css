@@ -765,3 +765,64 @@ nav a {
         font-size: 1.2rem;
     }
 }
+
+/* Thoughts styling */
+.thoughts-list {
+    margin-top: 2rem;
+}
+
+.thought {
+    margin-bottom: 2rem;
+}
+
+.thought-content {
+    margin-bottom: 0.5rem;
+}
+
+.thought-meta {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.thought-permalink {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.thought-permalink:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.thought-meta .tags {
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.thought-meta .tag {
+    border-bottom: none;
+    text-decoration: none;
+    color: var(--lightMainColor);
+    background: none;
+}
+
+.thought-meta .tag:hover {
+    text-decoration: underline;
+    background: none;
+    color: var(--lightMainColor);
+}
+
+.thought-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 2rem 0;
+}
+
+.single-thought {
+    margin-top: 2rem;
+}
