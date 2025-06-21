@@ -60,12 +60,13 @@ posted_by = "Published by"
 read_time = "minute read"
 all_tags = "All tags"
 menus = [
-    { name = "thoughts", url = "/thoughts", weight = 1 },
-    { name = "blog", url = "/posts", weight = 2 },
-    { name = "photography", url = "/photography", weight = 3 },
-    { name = "projects", url = "/projects", weight = 4 },
-    { name = "about", url = "/about", weight = 5 },
-    { name = "tags", url = "/tags", weight = 6 },
+  { name = "thoughts", url = "/thoughts", weight = 1 },
+  { name = "blog", url = "/posts", weight = 2 },
+  { name = "photography", url = "/photography", weight = 3 },
+  { name = "projects", url = "/projects", weight = 4 },
+  { name = "about", url = "/about", weight = 5 },
+  { name = "now", url = "/now", weight = 6 },
+  # { name = "tags", url = "/tags", weight = 7 },
 ]
 
 [[extra.social]]
