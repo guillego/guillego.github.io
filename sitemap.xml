@@ -66,6 +66,9 @@
         <loc>https://guillego.com/tags/</loc>
     </url>
     <url>
+        <loc>https://guillego.com/tags/album/</loc>
+    </url>
+    <url>
         <loc>https://guillego.com/tags/cycling/</loc>
     </url>
     <url>
@@ -104,5 +107,9 @@
     <url>
         <loc>https://guillego.com/thoughts/2025/05/10/first-post-using-posse/</loc>
         <lastmod>2025-05-10T15:16:08+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://guillego.com/thoughts/2025/12/24/in-switzerland-the-fog/</loc>
+        <lastmod>2025-12-23T23:14:18+00:00</lastmod>
     </url>
 </urlset>

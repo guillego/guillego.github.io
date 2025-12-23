@@ -5,13 +5,30 @@
 	<link href="https://guillego.com/atom.xml" rel="self" type="application/atom+xml"/>
 	<link href="https://guillego.com/" rel="alternate" type="text/html"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2025-05-10T15:16:08+00:00</updated>
+	<updated>2025-12-23T23:14:18+00:00</updated>
 	<id>https://guillego.com/atom.xml</id>
 	
 		<author>
 			<name>guillego</name>
 		</author>
 	
+	
+		<entry xml:lang="en">
+			<title>In Switzerland, the fog that often settles over the central...</title>
+			<published>2025-12-23T23:14:18+00:00</published>
+			<updated>2025-12-23T23:14:18+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;thoughts&#x2F;2025&#x2F;12&#x2F;24&#x2F;in-switzerland-the-fog&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;thoughts&#x2F;2025&#x2F;12&#x2F;24&#x2F;in-switzerland-the-fog&#x2F;</id>
+			<content type="html">&lt;p&gt;In Switzerland, the fog that often settles over the central plateau is known as the Nebelsuppe, a fog soup (album). &lt;a href=&quot;https:&#x2F;&#x2F;guillego.com&#x2F;photography&#x2F;nebelsuppe&quot;&gt;guillego.com&#x2F;photography&#x2F;nebelsuppe&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+			
+				
+					<category term="album"/>
+				
+					<category term="photography"/>
+				
+			
+		</entry>
 	
 		<entry xml:lang="en">
 			<title>First post using POSSE (post once, syndicate everywhere). Should appear...</title>
