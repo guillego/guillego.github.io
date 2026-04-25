@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ get_url(path='css/notebook.css') }}">
+
+  {% if config.extra.favicon %}<link rel="icon" type="image/png" href="{{ config.extra.favicon }}">{% endif %}
+
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+  {% if section %}<link rel="alternate" type="application/atom+xml" title="{{ config.title }} — {{ section.title }} Atom Feed" href="{{ section.permalink }}atom.xml">{% endif %}
+
+  {% block meta %}
+    {% set desc = "" %}
+    {% if page and page.description %}{% set desc = page.description %}
+    {% elif section and section.description %}{% set desc = section.description %}
+    {% elif config.description %}{% set desc = config.description %}{% endif %}
+    {% if desc %}<meta name="description" content="{{ desc }}">{% endif %}
+    <meta property="og:title" content="{% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% else %}{{ config.title }}{% endif %}">
+    {% if desc %}<meta property="og:description" content="{{ desc }}">{% endif %}
+  {% endblock %}
+
+  {% if config.extra.goatcounter %}
+  <script data-goatcounter="https://{{ config.extra.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
+
+  <script>
+    try { var m = localStorage.getItem('mode'); if (m === 'dark' || m === 'light') document.documentElement.setAttribute('data-pre-mode', m); } catch (e) {}
+  </script>
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body data-palette="flexoki" data-density="regular" data-motifs="subtle" data-mode="light" data-type="quiet">
+<div class="app">
+
+{% macro nav_link(url, label) %}
+  {% set is_active = false %}
+  {% if url == "/" and current_path == "/" %}{% set is_active = true %}
+  {% elif url != "/" and current_path is starting_with(url) %}{% set is_active = true %}{% endif %}
+  <a class="nav-link {% if is_active %}active{% endif %}" href="{{ url }}">{{ label }}</a>
+{% endmacro nav_link %}
+
+<nav class="nav">
+  <a class="nav-brand" href="{{ config.base_url }}">
+    <span class="dot"></span>
+    <span>{{ config.title }}</span>
+  </a>
+  <div class="nav-center">
+    {{ self::nav_link(url="/", label="Index") }}
+    {{ self::nav_link(url="/thoughts", label="Thoughts") }}
+    {{ self::nav_link(url="/posts", label="Blog") }}
+    {{ self::nav_link(url="/photography", label="Photography") }}
+    {{ self::nav_link(url="/projects", label="Projects") }}
+    {{ self::nav_link(url="/about", label="About") }}
+    {{ self::nav_link(url="/now", label="Now") }}
+  </div>
+  <div class="nav-right">
+    <a id="mode-toggle" title="toggle mode" style="cursor:pointer">◐</a>
+  </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>
+      <div style="display:flex; align-items:center; gap:10px">
+        <span style="width:8px; height:8px; border-radius:50%; background:var(--accent)"></span>
+        <span style="font-family:'Newsreader', serif; font-style:italic; font-size:22px">{{ config.title }}</span>
+      </div>
+      <p style="margin-top:14px; max-width:320px; line-height:1.7; font-family:'Newsreader', serif; font-style:italic; font-size:14px; color:var(--ink-2)">
+        I'm Guillermo, known as guillego in some places around the internet. This is my personal website where I share my thoughts, projects, photography, and more.
+      </p>
+    </div>
+    <div>
+      <div class="foot-h">Notebook</div>
+      <div class="foot-list">
+        <a href="/thoughts">Thoughts</a><br>
+        <a href="/posts">Posts</a><br>
+        <a href="/photography">Photography</a><br>
+        <a href="/projects">Projects</a>
+      </div>
+    </div>
+    <div>
+      <div class="foot-h">Subscribe</div>
+      <div class="foot-list">
+        <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">RSS — /atom.xml</a><br>
+        <a href="/now">Now</a><br>
+        <a href="/tags">Tags</a>
+      </div>
+    </div>
+    <div>
+      <div class="foot-h">Elsewhere</div>
+      <div class="foot-list">
+        <span>mail [lands-at] guillego.com</span><br>
+        {% for s in config.extra.social %}
+          <a href="{{ s.url }}">{{ s.name }}</a><br>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>made with ♡ by guillego</span>
+    <span class="colophon">
+      Built with <a href="https://www.getzola.org/">Zola</a> ·
+      colours from <a href="https://stephango.com/flexoki">Flexoki</a> by Steph Ango ·
+      set in <a href="https://fonts.google.com/specimen/Newsreader">Newsreader</a>, <a href="https://rsms.me/inter/">Inter</a> &amp; <a href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a> ·
+      <a href="https://github.com/guillego/guillego.github.io">source</a>
+    </span>
+  </div>
+</footer>
+
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+    <path d="M7 12 V2 M3 6 L7 2 L11 6" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+</div>
+
+<script>
+  (function () {
+    var body = document.body;
+    try {
+      var saved = localStorage.getItem('mode');
+      if (saved === 'dark' || saved === 'light') body.dataset.mode = saved;
+    } catch (e) {}
+
+    var modeBtn = document.getElementById('mode-toggle');
+    if (modeBtn) {
+      modeBtn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        var next = body.dataset.mode === 'dark' ? 'light' : 'dark';
+        body.dataset.mode = next;
+        try { localStorage.setItem('mode', next); } catch (e) {}
+      });
+    }
+
+    var topBtn = document.getElementById('back-to-top');
+    if (topBtn) {
+      var update = function () {
+        if (window.scrollY > 320) topBtn.classList.add('visible');
+        else topBtn.classList.remove('visible');
+      };
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+      topBtn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,21 +1,55 @@
-{% extends "base.html" %}
+{% extends "notebook-base.html" %}
 
-{% block main_content %}
-<main class="single-thought">
-    <article class="thought">
-        <div class="thought-content">
-            {{ page.content | safe }}
-        </div>
-        <div class="thought-meta">
-            <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d %H:%M") }}</time>
-            {% if page.taxonomies.tags %}
-                <div class="tags">
-                    {% for tag in page.taxonomies.tags %}
-                        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
-                    {% endfor %}
-                </div>
+{% block title %}Thought · {{ page.date | date(format="%Y-%m-%d") }} — {{ config.title }}{% endblock %}
+
+{% block body %}
+<main class="page narrow">
+  <article class="article ink-in">
+    <a class="t-cap article-back" href="/thoughts">← back to thoughts</a>
+    <div class="byline ink-in d2" style="margin-top:14px">
+      <span>{{ page.date | date(format="%Y.%m.%d %H:%M") }}</span>
+      {% if page.taxonomies and page.taxonomies.tags %}
+        <span>·</span>
+        <span class="article-tags">
+          {% for t in page.taxonomies.tags %}<a class="link" href="{{ get_taxonomy_url(kind='tags', name=t) | safe }}">#{{ t }}</a>{% endfor %}
+        </span>
+      {% endif %}
+    </div>
+    <div class="article-body ink-in d3" style="margin-top:24px; font-style:italic">
+      {{ page.content | safe }}
+    </div>
+
+    {% if page.extra and page.extra.images %}
+      <div class="album-grid" style="margin-top:32px">
+        {% for image in page.extra.images %}
+          {% set src = "" %}
+          {% set alt = "" %}
+          {% if image is string %}
+            {% set src = image %}
+          {% else %}
+            {% if image.src %}{% set src = image.src %}
+            {% elif image.path %}{% set src = image.path %}{% endif %}
+            {% if image.alt %}{% set alt = image.alt %}{% endif %}
+          {% endif %}
+          {# strip leading "static/" since Zola serves it at site root #}
+          {% if src is starting_with("static/") %}
+            {% set stripped = src | trim_start_matches(pat="static/") %}
+            {% set src = "/" ~ stripped %}
+          {% endif %}
+          <figure class="plate album-plate">
+            <div class="frame">
+              <img src="{{ src }}" alt="{{ alt }}">
+              <span class="corner-tl"></span><span class="corner-tr"></span><span class="corner-bl"></span><span class="corner-br"></span>
+            </div>
+            {% if alt %}
+              <figcaption class="caption">
+                <span class="cap-text">{{ alt }}</span>
+              </figcaption>
             {% endif %}
-        </div>
-    </article>
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </article>
 </main>
-{% endblock main_content %} 
+{% endblock %}

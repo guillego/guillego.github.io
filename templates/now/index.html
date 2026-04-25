@@ -1,19 +1,57 @@
-{% extends "base.html" %}
+{% extends "notebook-base.html" %}
 
-{% block main_content %}
-<main>
-    <article>
-    <time>updated on {{ page.date | date(format="%Y-%m-%d") }}</time>
-        <div class="post-header">
-            {% if page.date %}
-            <div class="post-meta">
-            </div>
-            {% endif %}
-        </div>
-        
-        <section class="body">
-            {{ page.content | safe }}
-        </section>
+{% block title %}Now — {{ config.title }}{% endblock %}
+
+{% block body %}
+{% set entries = section.pages %}
+{% set latest = entries | first %}
+{% set then_entries = entries | slice(start=1) %}
+
+<main class="page narrow">
+  <header class="page-hero ink-in">
+    {% if latest %}
+      <div class="t-cap">Last tended {{ latest.date | date(format="%Y.%m.%d") }}</div>
+    {% endif %}
+    <h1 class="page-title ink-in d1"><em>Now</em></h1>
+  </header>
+
+  <hr class="rule" style="margin-top:36px; margin-bottom:32px">
+
+  {% if latest %}
+    <article class="article ink-in d3">
+      <div class="article-body drop-cap">
+        {{ latest.content | safe }}
+      </div>
     </article>
+  {% else %}
+    <p class="lede">Nothing yet.</p>
+  {% endif %}
+
+  {% if then_entries | length > 0 %}
+    <section class="now-then ink-in d3">
+      <h2 class="now-then-title"><em>Then</em></h2>
+      <div class="home-index">
+        {% for e in then_entries %}
+          <a class="entry" href="{{ e.permalink }}">
+            <span class="date">{{ e.date | date(format="%Y.%m.%d") }}</span>
+            <span class="mark">
+              <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
+            </span>
+            <span class="title">{{ e.title }}</span>
+            <span class="arrow">→</span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <footer class="now-credit ink-in d3">
+    <p>
+      This is a <a class="serif-link" href="https://sive.rs/now">/now</a> page,
+      an idea from Derek Sivers — a single page on a personal site that says,
+      plainly, what you're up to right now. There's a directory of others at
+      <a class="serif-link" href="https://nownownow.com/about">nownownow.com</a>.
+    </p>
+  </footer>
 </main>
-{% endblock main_content %}
+{% endblock %}

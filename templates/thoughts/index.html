@@ -1,58 +1,37 @@
-{% extends "base.html" %}
+{% extends "notebook-base.html" %}
 
-{% block main_content %}
-<main class="thoughts-list">
-    <div class="site-description">
-        {% if section.content %}
-            {{ section.content | safe }}
-        {% endif %}
-    </div>
+{% block title %}Thoughts — {{ config.title }}{% endblock %}
 
-    <div class="thoughts-intro-divider">* * *</div>
+{% block body %}
+<main class="page">
+  <header class="page-hero ink-in">
+    <div class="t-cap">A microblog · short form</div>
+    <h1 class="page-title ink-in d1"><em>Thoughts</em></h1>
+    <p class="lede ink-in d2 page-lede">
+      Notes too small to be a post, too lasting to be a tweet. Posted once
+      here and syndicated to other places.
+    </p>
+  </header>
 
-    <div class="thoughts">
-        {% for thought in section.pages %}
-            <article class="thought">
-                <div class="thought-content">
-                    {{ thought.content | safe }}
-                </div>
-                <div class="thought-meta">
-                    <a href="{{ thought.permalink }}" class="thought-permalink">
-                        <time datetime="{{ thought.date }}">{{ thought.date | date(format="%Y-%m-%d %H:%M") }}</time>
-                    </a>
-                    {% if thought.taxonomies.tags %}
-                        <div class="tags">
-                            {% for tag in thought.taxonomies.tags %}
-                                <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">#{{ tag }}</a>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            </article>
-            {% if not loop.last %}
-                <div class="thoughts-separator"></div>
-            {% endif %}
-        {% endfor %}
-    </div>
+  <hr class="rule" style="margin-top:36px; margin-bottom:8px">
 
-    {% if paginator %}
-        <ul class="pagination">
-            {% if paginator.previous %}
-                <span class="page-item page-prev">
-                    <a href={{ paginator.previous }} class="page-link" aria-label="Previous">
-                        <span aria-hidden="true">{{ config.extra.translations[lang][0].previous_page }}</span>
-                    </a>
-                </span>
-            {% endif %}
-
-            {% if paginator.next %}
-                <span class="page-item page-next">
-                    <a href={{ paginator.next }} class="page-link" aria-label="Next">
-                        <span aria-hidden="true">{{ config.extra.translations[lang][0].next_page }}</span>
-                    </a>
-                </span>
-            {% endif %}
-        </ul>
-    {% endif %}
+  <div class="ink-in d3 home-index">
+    {% for t in section.pages %}
+      <a class="entry thought-entry" href="{{ t.permalink }}">
+        <span class="date">{{ t.date | date(format="%Y.%m.%d") }}</span>
+        <span class="mark">
+          <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
+        </span>
+        <span class="title">
+          <em>{{ t.content | striptags | trim }}</em>
+          {% if t.taxonomies and t.taxonomies.tags %}
+            <div class="entry-meta">
+              {% for tag in t.taxonomies.tags %}#{{ tag }}{% if not loop.last %} · {% endif %}{% endfor %}
+            </div>
+          {% endif %}
+        </span>
+      </a>
+    {% endfor %}
+  </div>
 </main>
-{% endblock main_content %} 
+{% endblock %}

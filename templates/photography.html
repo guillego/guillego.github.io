@@ -1,0 +1,44 @@
+{% extends "notebook-base.html" %}
+
+{% block title %}Photography — {{ config.title }}{% endblock %}
+
+{% block body %}
+<main class="page wide">
+  <header class="page-hero ink-in">
+    <div class="t-cap">A working contact sheet</div>
+    <h1 class="page-title ink-in d1"><em>Photography</em></h1>
+    <p class="lede ink-in d2 page-lede">
+      Albums and frames, newest first. Click any to see the full set.
+    </p>
+  </header>
+
+  <hr class="rule" style="margin-top:36px; margin-bottom:24px">
+
+  <div class="ink-in d3 photo-contact">
+    {% for ph in section.pages %}
+      {% set thumb = "" %}
+      {% if ph.extra and ph.extra.images and ph.extra.images | length > 0 %}
+        {% set thumb = ph.extra.images.0.src %}
+      {% endif %}
+      <a class="plate" href="{{ ph.permalink }}">
+        <div class="frame" style="aspect-ratio: 4 / 3">
+          {% if thumb %}
+            <img src="{{ thumb }}" alt="{{ ph.title }}" style="display:block; width:100%; height:100%; object-fit:cover">
+          {% else %}
+            <div style="width:100%; height:100%; background:var(--paper-3)"></div>
+          {% endif %}
+          <span class="corner-tl"></span><span class="corner-tr"></span><span class="corner-bl"></span><span class="corner-br"></span>
+        </div>
+        <div class="caption">
+          <span class="num">pl. {% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+          <span class="date">{{ ph.date | date(format="%Y.%m.%d") }}</span>
+        </div>
+        <div class="album-label">{{ ph.title }}</div>
+        {% if ph.extra and ph.extra.images %}
+          <div class="album-count mono">{{ ph.extra.images | length }} frames</div>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

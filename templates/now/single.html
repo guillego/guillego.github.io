@@ -1,0 +1,36 @@
+{% extends "notebook-base.html" %}
+
+{% block title %}Now · {{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block body %}
+<main class="page narrow">
+  <header class="page-hero ink-in">
+    <a class="t-cap article-back" href="/now">← back to current /now</a>
+    <h1 class="page-title ink-in d1" style="margin-top:14px">
+      <em>Then</em>
+      <span class="muted-2" style="font-size:.5em; margin-left:14px; font-style:normal">{{ page.date | date(format="%Y.%m.%d") }}</span>
+    </h1>
+    <p class="lede ink-in d2 page-lede" style="margin-top:14px">
+      What I was up to in <em>{{ page.title }}</em>. Kept here as a small archive
+      of past tendings.
+    </p>
+  </header>
+
+  <hr class="rule" style="margin-top:36px; margin-bottom:32px">
+
+  <article class="article ink-in d3">
+    <div class="article-body drop-cap">
+      {{ page.content | safe }}
+    </div>
+  </article>
+
+  <footer class="now-credit ink-in d3">
+    <p>
+      Past entry from the <a class="serif-link" href="/now">/now</a> page —
+      an idea from <a class="serif-link" href="https://sive.rs/now">Derek Sivers</a>,
+      with a directory of others at
+      <a class="serif-link" href="https://nownownow.com/about">nownownow.com</a>.
+    </p>
+  </footer>
+</main>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "notebook-base.html" %}
+
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block body %}
+<main class="page wide">
+  <header class="page-hero ink-in">
+    <a class="t-cap article-back" href="/photography">← back to photography</a>
+    <h1 class="page-title ink-in d1" style="margin-top:14px"><em>{{ page.title }}</em></h1>
+    <div class="byline ink-in d3" style="margin-top:14px">
+      <span>{{ page.date | date(format="%Y.%m.%d") }}</span>
+      {% if page.extra and page.extra.images %}
+        <span>·</span>
+        <span>{{ page.extra.images | length }} frames</span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.extra and page.extra.images %}
+    {# contact sheet — desktop only, anchors into the feed below #}
+    <aside class="album-contact ink-in d2" aria-label="Contact sheet">
+      {% for image in page.extra.images %}
+        <a class="album-thumb" href="#photo-{{ loop.index }}">
+          <div class="frame">
+            <img src="{{ image.src }}" alt="{{ image.alt | default(value='') }}" loading="lazy">
+            <span class="corner-tl"></span><span class="corner-tr"></span><span class="corner-bl"></span><span class="corner-br"></span>
+          </div>
+        </a>
+      {% endfor %}
+    </aside>
+  {% endif %}
+
+  {% if page.content %}
+    <div class="article ink-in d3 album-intro">
+      <div class="article-body">{{ page.content | safe }}</div>
+    </div>
+  {% endif %}
+
+  {% if page.extra and page.extra.images %}
+    <section class="album-feed ink-in d3">
+      {% for image in page.extra.images %}
+        <figure class="album-frame" id="photo-{{ loop.index }}">
+          <div class="frame">
+            <img src="{{ image.src }}" alt="{{ image.alt | default(value='') }}">
+          </div>
+          {% if image.caption %}
+            <figcaption><span class="cap-text">{{ image.caption }}</span></figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </section>
+  {% endif %}
+</main>
+{% endblock %}

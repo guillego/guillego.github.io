@@ -1,0 +1,42 @@
+{% extends "notebook-base.html" %}
+
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block body %}
+<main class="page narrow">
+  <article class="article ink-in">
+    {% set parent = page.ancestors | last %}
+    {% if "posts" in page.relative_path %}
+      <a class="t-cap article-back" href="/posts">← back to posts</a>
+    {% elif "projects" in page.relative_path %}
+      <a class="t-cap article-back" href="/projects">← back to projects</a>
+    {% endif %}
+
+    <h1 class="ink-in d1">{{ page.title }}</h1>
+
+    {% if page.description %}
+      <p class="lede ink-in d2 article-lede">{{ page.description }}</p>
+    {% endif %}
+
+    <div class="byline ink-in d3">
+      <span>{{ page.date | date(format="%Y.%m.%d") }}</span>
+      {% if page.reading_time %}
+        <span>·</span>
+        <span>{{ page.reading_time }} min · {{ page.word_count }} words</span>
+      {% endif %}
+      {% if page.taxonomies and page.taxonomies.tags %}
+        <span>·</span>
+        <span class="article-tags">
+          {% for t in page.taxonomies.tags %}
+            <a class="link" href="{{ get_taxonomy_url(kind='tags', name=t) | safe }}">#{{ t }}</a>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+
+    <div class="article-body ink-in d3">
+      {{ page.content | safe }}
+    </div>
+  </article>
+</main>
+{% endblock %}

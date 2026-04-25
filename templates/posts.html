@@ -1,0 +1,52 @@
+{% extends "notebook-base.html" %}
+
+{% block title %}Posts — {{ config.title }}{% endblock %}
+
+{% block body %}
+<main class="page">
+  <header class="page-hero ink-in">
+    <div class="t-cap">Long form · essays & reports</div>
+    <h1 class="page-title ink-in d1"><em>Posts</em></h1>
+    {% if section.description %}
+      <p class="lede ink-in d2 page-lede">{{ section.description | markdown(inline=true) | safe }}</p>
+    {% else %}
+      <p class="lede ink-in d2 page-lede">Pieces I wrote because I wanted to think them through.</p>
+    {% endif %}
+  </header>
+
+  <hr class="rule" style="margin-top:36px; margin-bottom:8px">
+
+  {% if paginator %}{% set show_pages = paginator.pages %}{% else %}{% set show_pages = section.pages %}{% endif %}
+
+  <div class="ink-in d2 home-index">
+    {% for p in show_pages %}
+      <a class="entry" href="{{ p.permalink }}">
+        <span class="date">{{ p.date | date(format="%Y.%m.%d") }}</span>
+        <span class="mark">
+          <svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
+        </span>
+        <span class="title">
+          {{ p.title }}
+          {% if p.description %}
+            <div class="entry-desc">{{ p.description }}</div>
+          {% endif %}
+          {% if p.taxonomies and p.taxonomies.tags %}
+            <div class="entry-meta">
+              {% if p.reading_time %}{{ p.reading_time }} min · {% endif %}{% for t in p.taxonomies.tags %}#{{ t }}{% if not loop.last %} · {% endif %}{% endfor %}
+            </div>
+          {% endif %}
+        </span>
+        <span class="arrow">→</span>
+      </a>
+    {% endfor %}
+  </div>
+
+  {% if paginator %}
+    <nav class="paginator">
+      {% if paginator.previous %}<a class="link" href="{{ paginator.previous }}">← previous</a>{% endif %}
+      <span class="muted-2 mono">page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+      {% if paginator.next %}<a class="link" href="{{ paginator.next }}">next →</a>{% endif %}
+    </nav>
+  {% endif %}
+</main>
+{% endblock %}
