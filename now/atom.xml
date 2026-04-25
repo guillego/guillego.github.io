@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>guillego</title>
+	
+	<link href="https://guillego.com/atom.xml" rel="self" type="application/atom+xml"/>
+	<link href="https://guillego.com/" rel="alternate" type="text/html"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2026-04-25T00:00:00+00:00</updated>
+	<id>https://guillego.com/atom.xml</id>
+	
+		<author>
+			<name>guillego</name>
+		</author>
+	
+	
+		<entry xml:lang="en">
+			<title>April 2026</title>
+			<published>2026-04-25T00:00:00+00:00</published>
+			<updated>2026-04-25T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;now&#x2F;2026-04&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;now&#x2F;2026-04&#x2F;</id>
+			<content type="html">&lt;p&gt;In Copenhagen, enjoying the arrival of spring. The days are quote long, the harbour ice is gone, and the first bike rides without a jacket and gloves feel delightful.&lt;&#x2F;p&gt;
+</content>
+			
+		</entry>
+	
+		<entry xml:lang="en">
+			<title>June 2025</title>
+			<published>2025-06-20T00:00:00+00:00</published>
+			<updated>2025-06-20T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;now&#x2F;2025-06&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;now&#x2F;2025-06&#x2F;</id>
+			<content type="html">&lt;p&gt;Living in Copenhagen (since September 2016!) and I feel really fortunate that in this season of life I bike commute most days in around 15 minutes. I&#x27;ve been dipping year round in the Baltic sea for a few years now and it keeps reminding me (especially in the depths of winter) that it always seems the hardest and most painful right before you go in.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m climbing (lead, boulder) a couple times per week and feel really proud of my steady running mileage increase over the past few years.&lt;&#x2F;p&gt;
+&lt;p&gt;I love living in this city so much, yet I am ever conflicted about the long distance relationships and friendships that I maintain (to varying levels of success).&lt;&#x2F;p&gt;
+&lt;p&gt;I feel really lucky to have been in a beautiful relationship for over a year and a half which has brought a lot of joy, fun and learning.&lt;&#x2F;p&gt;
+&lt;p&gt;These days I&#x27;m nerding out on operating systems and low level programming in general.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve been daydreaming for over a year now of building something that will transform how the electric grid works and enables renewables and energy storage to be deployed on a whole new scale by individuals, small communities and businesses in a decentralized way (perhaps I should start doing something about it).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;find-me&quot;&gt;Find me&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;guillermo-go&#x2F;&quot;&gt;Guillermo Galan Olleros&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;guillego&quot;&gt;guillego&lt;&#x2F;a&gt; on GitHub&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;guillego.com&quot;&gt;@guillego.com&lt;&#x2F;a&gt; on bluesky&lt;&#x2F;li&gt;
+&lt;li&gt;Message me: mail [in-the-mailbox-of] guillego.com&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+			
+		</entry>
+	
+</feed> 
