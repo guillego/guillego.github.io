@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+  <title>{% block title %}{{ config.title }}{% if config.extra.tagline %} — {{ config.extra.tagline }}{% endif %}{% endblock %}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
   {% if config.extra.favicon %}<link rel="icon" type="image/png" href="{{ config.extra.favicon }}">{% endif %}
 
   <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
-  {% if section %}<link rel="alternate" type="application/atom+xml" title="{{ config.title }} — {{ section.title }} Atom Feed" href="{{ section.permalink }}atom.xml">{% endif %}
+  {% if section and section.title and current_path != "/" %}<link rel="alternate" type="application/atom+xml" title="{{ config.title }} — {{ section.title }} Atom Feed" href="{{ section.permalink }}atom.xml">{% endif %}
 
   {% block meta %}
     {% set desc = "" %}
@@ -52,12 +52,9 @@
   </a>
   <div class="nav-center">
     {{ self::nav_link(url="/", label="Index") }}
-    {{ self::nav_link(url="/thoughts", label="Thoughts") }}
-    {{ self::nav_link(url="/posts", label="Blog") }}
-    {{ self::nav_link(url="/photography", label="Photography") }}
-    {{ self::nav_link(url="/projects", label="Projects") }}
-    {{ self::nav_link(url="/about", label="About") }}
-    {{ self::nav_link(url="/now", label="Now") }}
+    {% for item in config.extra.nav %}
+      {{ self::nav_link(url=item.url, label=item.label) }}
+    {% endfor %}
   </div>
   <div class="nav-right">
     <a id="mode-toggle" title="toggle mode" style="cursor:pointer">◐</a>
@@ -73,8 +70,8 @@
         <span style="width:8px; height:8px; border-radius:50%; background:var(--accent)"></span>
         <span style="font-family:'Newsreader', serif; font-style:italic; font-size:22px">{{ config.title }}</span>
       </div>
-      <p style="margin-top:14px; max-width:320px; line-height:1.7; font-family:'Newsreader', serif; font-style:italic; font-size:14px; color:var(--ink-2)">
-        I'm Guillermo, known as guillego in some places around the internet. This is my personal website where I share my thoughts, projects, photography, and more.
+      <p class="foot-tagline">
+        {{ config.extra.intro | markdown(inline=true) | striptags | trim }}
       </p>
     </div>
     <div>
@@ -97,7 +94,7 @@
     <div>
       <div class="foot-h">Elsewhere</div>
       <div class="foot-list">
-        <span>mail [lands-at] guillego.com</span><br>
+        {% if config.extra.email_obfuscated %}<span>{{ config.extra.email_obfuscated }}</span><br>{% endif %}
         {% for s in config.extra.social %}
           <a href="{{ s.url }}">{{ s.name }}</a><br>
         {% endfor %}
@@ -105,7 +102,7 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span>made with ♡ by guillego</span>
+    <span>{{ config.extra.footer_credit | default(value="") }}</span>
     <span class="colophon">
       Built with <a href="https://www.getzola.org/">Zola</a> ·
       colours from <a href="https://stephango.com/flexoki">Flexoki</a> by Steph Ango ·

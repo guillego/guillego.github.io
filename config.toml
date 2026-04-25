@@ -4,77 +4,59 @@ base_url = "https://guillego.com"
 title = "guillego"
 
 default_language = "en"
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
 
-# Whether to build a search index to be used later on by a JavaScript library
+# Build a search index for use by JS later
 build_search_index = true
 
 generate_feeds = true
 feed_filenames = ["atom.xml"]
 
-theme = "archioki"
-
 taxonomies = [{ name = "tags" }]
 
-# Define allowed extra variables in front matter that aren't taxonomies
-[extra.extra]
-images = true
-
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 insert_anchor_links = "none"
 
 [extra]
-mode = "toggle"
+# ─── Site identity ────────────────────────────────────────────────
+# Used as the suffix of <title>, e.g. "guillego — Field notebook"
+tagline = ""
 
-# subtitle will show under the title in index page
-subtitle = "Guille's site"
-
-# if set true, will use external CDN resource to load font and js file
-useCDN = false
-
-favicon = "/img/favicon.ico"
-
-# show in the footer
-copyright = false
-
-goatcounter = "guillegos-sites"
-
-# Author name used in feed templates
+# Author shown in atom feeds
 author = "guillego"
 
-# optional: config your i18n entry
-# [extra.translations]
-# languages = [{name = "en", url = "/"}]
+# Favicon path inside static/
+favicon = "/img/favicon.ico"
 
-# config multi-language menu and other text
-[[extra.translations.en]]
-show_more = "Read more ⟶"
-previous_page = "← Previous"
-next_page = "Next →"
-posted_on = ""
-posted_by = "Published by"
-read_time = "minute read"
-all_tags = "All tags"
-menus = [
-  { name = "thoughts", url = "/thoughts", weight = 1 },
-  { name = "blog", url = "/posts", weight = 2 },
-  { name = "photography", url = "/photography", weight = 3 },
-  { name = "projects", url = "/projects", weight = 4 },
-  { name = "about", url = "/about", weight = 5 },
-  { name = "now", url = "/now", weight = 6 },
-  # { name = "tags", url = "/tags", weight = 7 },
+# GoatCounter site key (set to empty string to disable analytics)
+goatcounter = "guillegos-sites"
+
+# ─── Intro copy ───────────────────────────────────────────────────
+# Markdown allowed. The first paragraph is also reused (links stripped)
+# in the footer tagline.
+intro = "I'm Guillermo, known as guillego in some places around the internet. This is my personal website where I share my [thoughts](/thoughts), [projects](/projects), [photography](/photography), and more."
+intro_more = "You can also learn more [about me](/about), see [what I'm up to now](/now) or explore by [tags](/tags)."
+
+# ─── Footer ───────────────────────────────────────────────────────
+email_obfuscated = "mail [lands-at] guillego.com"
+footer_credit = "made with ♡ by guillego"
+
+# ─── Top nav ──────────────────────────────────────────────────────
+# "Index" (the home link) is rendered first automatically.
+nav = [
+  { url = "/thoughts", label = "Thoughts" },
+  { url = "/posts", label = "Blog" },
+  { url = "/photography", label = "Photography" },
+  { url = "/projects", label = "Projects" },
+  { url = "/about", label = "About" },
+  { url = "/now", label = "Now" },
 ]
 
+# ─── Social links (footer "elsewhere" column) ─────────────────────
 [[extra.social]]
-icon = "github"
 name = "github"
 url = "https://github.com/guillego"
 
 [[extra.social]]
-icon = "bluesky"
 name = "bluesky"
 url = "https://bsky.app/profile/guillego.com"

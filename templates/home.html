@@ -1,7 +1,5 @@
 {% extends "notebook-base.html" %}
 
-{% block title %}{{ config.title }} — Field notebook{% endblock %}
-
 {% block body %}
 {% set thoughts = get_section(path="thoughts/_index.md") %}
 {% set posts_section = get_section(path="posts/_index.md") %}
@@ -10,12 +8,12 @@
 
 <main class="page">
   <div class="home-intro ink-in">
-    <p class="lede">
-      Hi there! I'm Guillermo, known as <span class="mono">guillego</span> in some places around the internet. This is my personal website where I share my <a class="serif-link" href="/thoughts">thoughts</a>, <a class="serif-link" href="/projects">projects</a>, <a class="serif-link" href="/photography">photography</a>, and more.
-    </p>
-    <p class="lede" style="margin-top:14px">
-      You can also learn more <a class="serif-link" href="/about">about me</a>, see <a class="serif-link" href="/now">what I'm up to now</a> or explore by <a class="serif-link" href="/tags">tags</a>.
-    </p>
+    {% if config.extra.intro %}
+      <p class="lede">{{ config.extra.intro | markdown(inline=true) | safe }}</p>
+    {% endif %}
+    {% if config.extra.intro_more %}
+      <p class="lede">{{ config.extra.intro_more | markdown(inline=true) | safe }}</p>
+    {% endif %}
   </div>
 
   <hr class="rule" style="margin-top:40px; margin-bottom:24px">

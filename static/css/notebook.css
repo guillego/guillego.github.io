@@ -507,20 +507,24 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   font-weight: 400;
   margin: 0;
 }
-.home-intro .mono {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-style: normal;
-  font-size: .72em;
-  color: var(--ink);
+.home-intro .lede + .lede { margin-top: 14px; }
+.home-intro .lede a.serif-link,
+.home-intro .lede a {
+  font-style: italic;
+  border-bottom: .5px solid var(--rule);
+  transition: color .2s, border-color .2s;
 }
+.home-intro .lede a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
-/* keeper's note */
-.home-keeper { max-width: 640px; margin-left: auto; margin-right: auto; margin-top: 88px; }
-.home-keeper .drop-cap {
+/* footer tagline (mirrors the home intro, plain text) */
+.foot-tagline {
+  margin-top: 14px;
+  max-width: 320px;
+  line-height: 1.7;
   font-family: 'Newsreader', Georgia, serif;
-  font-size: 19px;
-  line-height: 1.6;
-  margin: 0;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-2);
 }
 
 /* ============================================================
@@ -1010,73 +1014,6 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 }
 .home-hero h1 em { font-style: italic; }
 
-.now-card {
-  border: .5px solid var(--rule-2);
-  background: var(--paper-2);
-  padding: 14px 16px;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 11px;
-  line-height: 1.7;
-  color: var(--ink-2);
-}
-.now-card .label {
-  color: var(--ink-3);
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-size: 10px;
-  margin-bottom: 6px;
-}
-.now-card em { font-family: 'Newsreader', serif; font-style: italic; color: var(--ink); font-size: 13px; }
-
-/* two-up index columns */
-.cols-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  margin-top: 56px;
-}
-@media (max-width: 880px) { .cols-2 { grid-template-columns: 1fr; gap: 40px; } }
-
-.section-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  border-bottom: .5px solid var(--rule);
-  padding-bottom: 8px;
-}
-.section-head .title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 22px;
-}
-.section-head .more {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 10.5px;
-  color: var(--ink-3);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color .2s;
-}
-.section-head .more:hover { color: var(--accent-3); }
-
-/* compact list (homepage) */
-.mini-row {
-  display: grid;
-  grid-template-columns: 78px 1fr;
-  gap: 14px;
-  padding: 10px 0;
-  border-bottom: .5px solid var(--rule-2);
-  align-items: baseline;
-  cursor: pointer;
-  transition: background .15s;
-}
-.mini-row:hover { background: color-mix(in srgb, var(--paper-2) 50%, transparent); }
-.mini-row .date { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
-.mini-row .text { font-size: 15px; line-height: 1.4; }
-[data-type="serif"] .mini-row .text { font-family: 'Newsreader', serif; font-size: 17px; }
-
 /* ============================================================
    ARTICLE / POST page
    ============================================================ */
@@ -1180,32 +1117,6 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   color: var(--ink-2);
 }
 .plate .caption .date { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); }
-
-/* lightbox */
-.lightbox {
-  position: fixed; inset: 0;
-  background: color-mix(in srgb, var(--paper) 96%, transparent);
-  backdrop-filter: blur(10px);
-  z-index: 200;
-  display: flex; align-items: center; justify-content: center;
-  padding: 64px;
-  cursor: zoom-out;
-}
-.lightbox-frame {
-  position: relative;
-  max-width: 86vw;
-  max-height: 78vh;
-  background: var(--paper-2);
-  border: .5px solid var(--rule);
-}
-.lightbox .caption-row {
-  position: absolute;
-  bottom: -38px; left: 0; right: 0;
-  display: flex; justify-content: space-between;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--ink-3);
-}
 
 /* ============================================================
    PROJECTS
