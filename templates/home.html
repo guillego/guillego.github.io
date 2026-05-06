@@ -35,7 +35,7 @@
         </span>
         <span class="title">
           {% if is_thought %}
-            <em>{{ entry.content | striptags | trim | truncate(length=140) }}</em>
+            {{ entry.content | striptags | trim | truncate(length=140) }}
           {% else %}
             {{ entry.title }}
           {% endif %}
