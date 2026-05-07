@@ -80,20 +80,18 @@ html, body {
   padding: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.55;
+  font-weight: 300;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "ss01", "cv11";
 }
-[data-type="serif"] body, body[data-type="serif"] {
-  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
-  font-size: 17px;
-}
+em { font-style: normal; }
 [data-type="mono"] body, body[data-type="mono"] {
   font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace;
   font-size: 14.5px;
+  font-weight: 400;
 }
 
 body {
@@ -163,21 +161,20 @@ body::before {
 [data-mode="dark"][data-motifs="off"] body::before { opacity: 0; }
 
 .mono { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; }
-.serif { font-family: 'Newsreader', Georgia, serif; }
-.sans  { font-family: 'Inter', system-ui, sans-serif; }
+.serif { font-family: 'Geist', system-ui, sans-serif; }
+.sans  { font-family: 'Geist', system-ui, sans-serif; }
 
 /* type scale */
-.t-display { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5.5vw, 72px); line-height: 1.04; letter-spacing: -.012em; }
-.t-h1     { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -.008em; }
-.t-h2     { font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px; line-height: 1.2; }
-.t-h3     { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 15px; line-height: 1.3; letter-spacing: -.005em; }
+.t-display { font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: clamp(40px, 5.5vw, 72px); line-height: 1.04; letter-spacing: -.018em; }
+.t-h1     { font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -.012em; }
+.t-h2     { font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: 24px; line-height: 1.2; letter-spacing: -.005em; }
+.t-h3     { font-family: 'Geist', system-ui, sans-serif; font-weight: 600; font-size: 15px; line-height: 1.3; letter-spacing: -.005em; }
 .t-body   { font-size: 16px; line-height: 1.62; }
-.t-lede   { font-family: 'Newsreader', Georgia, serif; font-size: 22px; line-height: 1.45; font-style: italic; color: var(--ink-2); font-weight: 400; }
+.t-lede   { font-family: 'Geist', system-ui, sans-serif; font-size: 22px; line-height: 1.5; color: var(--ink-2); font-weight: 400; }
 .t-cap    { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
 .t-meta   { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; line-height: 1.5; color: var(--ink-2); }
 .t-date   { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; line-height: 1; letter-spacing: .02em; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .t-num    { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
-.italic { font-style: italic; }
 
 a { color: inherit; text-decoration: none; }
 a.link { border-bottom: .5px solid var(--rule); transition: border-color .2s, color .2s; cursor: pointer; }
@@ -213,9 +210,10 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 19px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -.005em;
   cursor: pointer;
 }
 .nav-brand .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
@@ -290,11 +288,11 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   .gloss-row .gloss { display: none; }
 }
 .gloss {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
+  font-family: 'Geist', system-ui, sans-serif;
   color: var(--ink-3);
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
   padding-top: 4px;
   text-align: right;
   position: relative;
@@ -329,11 +327,10 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   border-bottom: .5px solid var(--rule);
 }
 .year-head .y {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 36px;
-  font-weight: 400;
-  letter-spacing: -.01em;
-  font-style: italic;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -.012em;
 }
 .year-head .meta { color: var(--ink-3); }
 
@@ -359,11 +356,10 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 .entry .title {
   font-size: 16px;
   line-height: 1.4;
+  font-weight: 400;
   color: var(--ink);
   padding-right: 18px;
 }
-[data-type="serif"] .entry .title { font-family: 'Newsreader', Georgia, serif; font-size: 18px; }
-.entry .title em { font-style: italic; color: var(--ink-2); }
 .entry .tags {
   display: flex; gap: 8px;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
@@ -375,8 +371,8 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 .entry .tags a:hover { color: var(--accent-3); }
 .entry .arrow {
   color: var(--ink-3);
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 18px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: 14px;
   transition: transform .25s, color .25s;
 }
 .entry:hover .arrow { color: var(--accent-3); transform: translateX(4px); }
@@ -391,25 +387,23 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 .home-index { margin-top: 8px; border-top: .5px solid var(--rule); }
 .home-index .entry { padding: 18px 0; }
 .home-index .entry .title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 19px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.35;
+  line-height: 1.4;
 }
-.home-index .entry .title em { font-style: italic; color: var(--ink-2); }
 
 /* simplified homepage section blocks */
 .home-block { margin-top: 72px; }
 .home-block-title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 1;
-  letter-spacing: -.005em;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -.012em;
   margin: 0 0 22px;
   color: var(--ink);
 }
-.home-block-title em { font-style: italic; }
 
 /* projects */
 .home-projects {
@@ -423,17 +417,18 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 .home-project { display: block; cursor: pointer; transition: opacity .2s; }
 .home-project:hover { opacity: .65; }
 .home-project-title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 21px;
-  line-height: 1.2;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: -.005em;
   margin: 6px 0 6px;
 }
-.home-project-title em { font-style: italic; }
 .home-project-desc {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 15px;
-  line-height: 1.5;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.55;
   color: var(--ink-2);
 }
 
@@ -453,9 +448,9 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   align-items: baseline;
 }
 .home-photos .caption .label {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 14px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 13.5px;
   color: var(--ink);
 }
 .home-photos .caption .date {
@@ -470,14 +465,14 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   max-width: 720px;
 }
 .now-then-title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 1;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -.012em;
   margin: 0 0 14px;
   color: var(--ink);
 }
-.now-then-title em { font-style: italic; }
 .now-then .home-index { margin-top: 0; }
 
 /* /now page footer credit */
@@ -488,9 +483,9 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   border-top: .5px dotted var(--rule-2);
 }
 .now-credit p {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 14.5px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 13.5px;
   line-height: 1.6;
   color: var(--ink-3);
   margin: 0;
@@ -499,18 +494,17 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 /* homepage intro */
 .home-intro { max-width: 640px; margin-top: 8px; }
 .home-intro .lede {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: clamp(17px, 1.5vw, 20px);
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.55;
   color: var(--ink-2);
   font-weight: 400;
+  letter-spacing: -.002em;
   margin: 0;
 }
-.home-intro .lede + .lede { margin-top: 14px; }
-.home-intro .lede a.serif-link,
+.home-intro .lede + .lede { margin-top: 12px; }
 .home-intro .lede a {
-  font-style: italic;
+  color: var(--ink);
   border-bottom: .5px solid var(--rule);
   transition: color .2s, border-color .2s;
 }
@@ -521,9 +515,9 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   margin-top: 14px;
   max-width: 320px;
   line-height: 1.7;
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 14px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 13.5px;
   color: var(--ink-2);
 }
 
@@ -534,19 +528,17 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 .page-hero { margin-top: 8px; }
 .page-hero .t-cap { display: inline-block; }
 .page-title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(40px, 5.5vw, 64px);
-  line-height: 1.04;
-  letter-spacing: -.012em;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(34px, 4.6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -.022em;
   margin: 12px 0 0;
 }
-.page-title em { font-style: italic; }
 .page-lede {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: clamp(20px, 2vw, 24px);
-  line-height: 1.45;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.5;
   color: var(--ink-2);
   max-width: 640px;
   margin: 16px 0 0;
@@ -570,18 +562,18 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   margin: 0 auto;
 }
 .article-lede {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 1.45;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
   color: var(--ink-2);
   margin: 14px 0 18px;
   font-weight: 400;
 }
 .article-body {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 19px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: 17px;
   line-height: 1.7;
+  font-weight: 300;
   color: var(--ink);
 }
 .article-body > *:first-child { margin-top: 0; }
@@ -589,9 +581,9 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   margin: 0 0 18px;
 }
 .article-body h1, .article-body h2, .article-body h3, .article-body h4 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-weight: 500;
-  letter-spacing: -.005em;
+  letter-spacing: -.012em;
   line-height: 1.2;
   color: var(--ink);
 }
@@ -605,13 +597,13 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   transition: color .2s, border-color .2s;
 }
 .article-body a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-.article-body em { font-style: italic; }
+.article-body em { font-weight: 400; }
 .article-body strong { font-weight: 600; }
 .article-body blockquote {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 1.5;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.55;
   color: var(--ink-2);
   margin: 28px 0;
   border-left: 2px solid var(--accent);
@@ -688,12 +680,12 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
    about, now). When applied to .article-body it targets the first
    letter of the first paragraph only. */
 .article-body.drop-cap > p:first-child::first-letter {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 4.6em;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 4.2em;
   float: left;
-  line-height: 0.85;
-  margin: 0.05em 0.08em 0 0;
+  line-height: 0.9;
+  margin: 0.06em 0.1em 0 0;
   color: var(--accent);
 }
 [data-motifs="off"] .article-body.drop-cap > p:first-child::first-letter {
@@ -721,13 +713,12 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 
 /* extra entry meta in posts list */
 .entry-desc {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 15px;
-  line-height: 1.45;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--ink-2);
   margin-top: 4px;
-  font-weight: 400;
 }
 .entry-meta {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
@@ -778,21 +769,20 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   padding-top: 10px;
 }
 .proj-card .title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
-  font-size: 26px;
-  letter-spacing: -.005em;
-  line-height: 1.15;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -.012em;
+  line-height: 1.2;
   margin-bottom: 8px;
   color: var(--ink);
 }
-.proj-card .title em { font-style: italic; }
 .proj-card .desc {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
   color: var(--ink-2);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.55;
   margin-bottom: 10px;
   max-width: 56ch;
 }
@@ -834,9 +824,10 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 }
 @media (max-width: 760px) { .photo-contact { grid-template-columns: repeat(2, 1fr); } }
 .photo-contact .album-label {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 17px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -.005em;
   color: var(--ink);
   margin-top: 4px;
 }
@@ -927,9 +918,9 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   letter-spacing: .08em;
 }
 .album-frame figcaption .cap-text {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 14.5px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 13.5px;
   color: var(--ink-2);
 }
 
@@ -965,7 +956,7 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 }
 .chip .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
-.dingbat { color: var(--ink-3); font-family: 'Newsreader', Georgia, serif; font-style: italic; }
+.dingbat { color: var(--ink-3); font-family: 'Geist', system-ui, sans-serif; font-weight: 300; }
 .dingbat--center { text-align: center; padding: 28px 0; letter-spacing: .4em; }
 [data-motifs="off"] .dingbat { display: none; }
 
@@ -995,24 +986,22 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   .home-hero .meta-col { order: -1; }
 }
 .home-hero .lede {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: clamp(22px, 2.4vw, 28px);
-  line-height: 1.4;
-  font-style: italic;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.5;
   color: var(--ink-2);
   max-width: 640px;
   margin: 18px 0 0;
   font-weight: 400;
 }
 .home-hero h1 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(40px, 6vw, 72px);
-  line-height: 1.02;
-  letter-spacing: -.015em;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(36px, 5.4vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -.022em;
   margin: 12px 0 0;
 }
-.home-hero h1 em { font-style: italic; }
 
 /* ============================================================
    ARTICLE / POST page
@@ -1022,23 +1011,25 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   margin: 0 auto;
 }
 .article h1 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.1;
-  letter-spacing: -.012em;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(28px, 3.6vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -.02em;
   margin: 8px 0 6px;
 }
 .article h2 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
+  letter-spacing: -.012em;
   margin: 36px 0 8px;
 }
 .article p {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 18px;
-  line-height: 1.62;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.7;
   margin: 0 0 18px;
 }
 .article .byline {
@@ -1053,12 +1044,12 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   margin-bottom: 28px;
 }
 .drop-cap::first-letter {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 4.6em;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 4.2em;
   float: left;
-  line-height: 0.85;
-  margin: 0.05em 0.08em 0 0;
+  line-height: 0.9;
+  margin: 0.06em 0.1em 0 0;
   color: var(--accent);
 }
 [data-motifs="off"] .drop-cap::first-letter { font-size: 1em; float: none; margin: 0; color: inherit; }
@@ -1111,9 +1102,9 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   font-size: 10px; color: var(--ink-3); letter-spacing: .1em;
 }
 .plate .caption .label {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
-  font-size: 13px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 12.5px;
   color: var(--ink-2);
 }
 .plate .caption .date { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); }
@@ -1144,20 +1135,19 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   padding-top: 6px;
 }
 .proj-card .title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 400;
-  font-size: 26px;
-  letter-spacing: -.005em;
-  line-height: 1.15;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -.012em;
+  line-height: 1.2;
   margin-bottom: 6px;
 }
-.proj-card .title em { font-style: italic; }
 .proj-card .desc {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 300;
   color: var(--ink-2);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.55;
   margin-bottom: 8px;
   max-width: 56ch;
 }
@@ -1198,16 +1188,17 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   background: repeating-linear-gradient(0deg, rgba(0,0,0,.04) 0 1px, transparent 1px 6px);
 }
 .book .spine .initials {
-  font-family: 'Newsreader', serif;
-  font-style: italic;
-  font-size: 22px;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -.01em;
   color: var(--ink-2);
 }
 .book .info .title {
-  font-family: 'Newsreader', serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-style: italic;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.3;
   margin-bottom: 4px;
 }
 .book .info .author { font-size: 12.5px; color: var(--ink-2); }
@@ -1342,10 +1333,9 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   .back-to-top { transition: opacity .15s linear; transform: none !important; }
 }
 
-/* link hover for inline serif */
+/* inline link emphasis (used in /now templates) */
 .serif-link {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
+  color: var(--ink);
   border-bottom: .5px solid var(--rule);
   cursor: pointer;
   transition: color .2s, border-color .2s;
