@@ -7,9 +7,9 @@
   <header class="page-hero ink-in">
     <div class="t-cap">A working contact sheet</div>
     <h1 class="page-title ink-in d1"><em>Photography</em></h1>
-    <p class="lede ink-in d2 page-lede">
-      Albums and frames, newest first. Click any to see the full set.
-    </p>
+    <div class="lede ink-in d2 page-lede">
+      {{ section.content | safe }}
+    </div>
   </header>
 
   <hr class="rule" style="margin-top:36px; margin-bottom:24px">

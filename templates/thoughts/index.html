@@ -5,12 +5,10 @@
 {% block body %}
 <main class="page">
   <header class="page-hero ink-in">
-    <div class="t-cap">A microblog · short form</div>
     <h1 class="page-title ink-in d1"><em>Thoughts</em></h1>
-    <p class="lede ink-in d2 page-lede">
-      Notes too small to be a post, too lasting to be a tweet. Posted once
-      here and syndicated to other places.
-    </p>
+    <div class="lede ink-in d2 page-lede">
+      {{ section.content | safe }}
+    </div>
   </header>
 
   <hr class="rule" style="margin-top:36px; margin-bottom:8px">

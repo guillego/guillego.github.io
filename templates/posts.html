@@ -5,12 +5,11 @@
 {% block body %}
 <main class="page">
   <header class="page-hero ink-in">
-    <div class="t-cap">Long form · essays & reports</div>
     <h1 class="page-title ink-in d1"><em>Posts</em></h1>
-    {% if section.description %}
+    {% if section.content %}
+      <div class="lede ink-in d2 page-lede">{{ section.content | safe }}</div>
+    {% elif section.description %}
       <p class="lede ink-in d2 page-lede">{{ section.description | markdown(inline=true) | safe }}</p>
-    {% else %}
-      <p class="lede ink-in d2 page-lede">Pieces I wrote because I wanted to think them through.</p>
     {% endif %}
   </header>
 
