@@ -35,7 +35,7 @@
 
   {% block extra_head %}{% endblock %}
 </head>
-<body data-palette="flexoki" data-density="regular" data-motifs="subtle" data-mode="light" data-type="quiet">
+<body data-palette="flexoki" data-density="regular" data-motifs="off" data-mode="light" data-type="quiet">
 <div class="app">
 
 {% macro nav_link(url, label) %}
@@ -47,7 +47,6 @@
 
 <nav class="nav">
   <a class="nav-brand" href="{{ config.base_url }}">
-    <span class="dot"></span>
     <span>{{ config.title }}</span>
   </a>
   <div class="nav-center">
@@ -67,7 +66,6 @@
   <div class="foot-inner">
     <div>
       <div style="display:flex; align-items:center; gap:10px">
-        <span style="width:8px; height:8px; border-radius:50%; background:var(--accent)"></span>
         <span style="font-family:'Geist', system-ui, sans-serif; font-weight:500; font-size:20px">{{ config.title }}</span>
       </div>
       <p class="foot-tagline">
@@ -75,7 +73,6 @@
       </p>
     </div>
     <div>
-      <div class="foot-h">Notebook</div>
       <div class="foot-list">
         <a href="/thoughts">Thoughts</a><br>
         <a href="/posts">Posts</a><br>
@@ -84,9 +81,8 @@
       </div>
     </div>
     <div>
-      <div class="foot-h">Subscribe</div>
       <div class="foot-list">
-        <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">RSS — /atom.xml</a><br>
+        <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">Atom (RSS)</a><br>
         <a href="/now">Now</a><br>
         <a href="/tags">Tags</a>
       </div>
@@ -104,10 +100,7 @@
   <div class="foot-bottom">
     <span>{{ config.extra.footer_credit | default(value="") }}</span>
     <span class="colophon">
-      Built with <a href="https://www.getzola.org/">Zola</a> ·
-      colours from <a href="https://stephango.com/flexoki">Flexoki</a> by Steph Ango ·
-      set in <a href="https://vercel.com/font">Geist</a> &amp; <a href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a> ·
-      <a href="https://github.com/guillego/guillego.github.io">source</a>
+      Built with <a href="https://www.getzola.org/">Zola</a>
     </span>
   </div>
 </footer>
