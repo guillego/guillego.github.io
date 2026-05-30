@@ -100,31 +100,7 @@ body {
   overflow-x: hidden;
 }
 
-/* paper texture: rules + flecks. Toggle via data-motifs */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(0,0,0,.014) 0 1px, transparent 1px),
-    radial-gradient(circle at 70% 60%, rgba(0,0,0,.012) 0 1px, transparent 1px),
-    radial-gradient(circle at 40% 80%, rgba(0,0,0,.010) 0 1px, transparent 1px);
-  background-size: 7px 7px, 11px 11px, 13px 13px;
-  opacity: .9;
-  mix-blend-mode: multiply;
-  transition: opacity .3s;
-}
-[data-motifs="off"] body::before { opacity: 0; }
-[data-motifs="full"] body::before {
-  opacity: 1;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(0,0,0,.022) 0 1.2px, transparent 1.2px),
-    radial-gradient(circle at 70% 60%, rgba(0,0,0,.020) 0 1.2px, transparent 1.2px),
-    radial-gradient(circle at 40% 80%, rgba(0,0,0,.016) 0 1.2px, transparent 1.2px),
-    repeating-linear-gradient(0deg, rgba(0,0,0,.012) 0 0.5px, transparent 0.5px 28px);
-}
+/* paper texture removed — plain background */
 [data-motifs="full"] .hand-rule path { stroke-width: 1.1; opacity: 1 !important; }
 [data-motifs="full"] .folio-mark { color: var(--ink-2); }
 [data-motifs="full"] .gloss { color: var(--ink-2); font-size: 14.5px; }
@@ -157,8 +133,6 @@ body::before {
 [data-motifs="off"] .hand-rule { display: none; }
 [data-motifs="off"] .dingbat { display: none; }
 [data-motifs="off"] .folio-mark { display: none; }
-[data-mode="dark"] body::before { mix-blend-mode: screen; opacity: .5; }
-[data-mode="dark"][data-motifs="off"] body::before { opacity: 0; }
 
 .mono { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; }
 .serif { font-family: 'Geist', system-ui, sans-serif; }
@@ -544,6 +518,15 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   margin: 16px 0 0;
   font-weight: 400;
 }
+/* when .page-lede wraps rendered markdown (section.content), flatten the inner paragraphs */
+.page-lede > p { margin: 0; }
+.page-lede > p + p { margin-top: 12px; }
+.page-lede a {
+  color: var(--ink);
+  border-bottom: .5px solid var(--rule);
+  transition: color .2s, border-color .2s;
+}
+.page-lede a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .article-back {
   display: inline-flex;
   align-items: center;
