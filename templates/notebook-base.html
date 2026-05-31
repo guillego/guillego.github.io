@@ -65,15 +65,8 @@
 <footer class="foot">
   <div class="foot-inner">
     <div>
-      <div style="display:flex; align-items:center; gap:10px">
-        <span style="font-family:'Geist', system-ui, sans-serif; font-weight:500; font-size:20px">{{ config.title }}</span>
-      </div>
-      <p class="foot-tagline">
-        {{ config.extra.intro | markdown(inline=true) | striptags | trim }}
-      </p>
-    </div>
-    <div>
       <div class="foot-list">
+        <a href="/about">About</a><br>
         <a href="/thoughts">Thoughts</a><br>
         <a href="/posts">Posts</a><br>
         <a href="/photography">Photography</a><br>
@@ -88,7 +81,7 @@
       </div>
     </div>
     <div>
-      <div class="foot-h">Elsewhere</div>
+      <div class="foot-h">Contact</div>
       <div class="foot-list">
         {% if config.extra.email_obfuscated %}<span>{{ config.extra.email_obfuscated }}</span><br>{% endif %}
         {% for s in config.extra.social %}

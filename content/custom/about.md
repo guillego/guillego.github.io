@@ -1,22 +1,22 @@
 +++
 title = "About"
-date = "2025-01-23"
+date = "2026-05-31"
 path = "about"
 template = "about.html"
 +++
 
-<img src="/img/profile.jpeg" height="256" alt="Profile photo">
+<img src="/img/profile.jpeg" alt="Profile photo" style="max-width: 280px; height: auto;">
 
-Hi!
-
-I’m Guille. You may also know me as guillego or iamsiesta.
+I’m Guille. You may also know me as guillego.
 
 I'm a [telecom-turned-biomedical-turned-software engineer](https://www.linkedin.com/in/guillermo-go/).
 
 Born and raised in Madrid, Spain, moved to Copenhagen a few years ago, where my favorite things are cycling through the city,
 jumping into the sea, eating pastries and the long days of summer.
 
-Professionally, these days I'm working across the stack (Rust/React) in the SaaS world, reducing the friction and manual process of compliance for large companies. I'm particularly attracted to distributed systems and have found a lot of joy when working with Elixir and most recently in Go and Rust. I'm also genuinely curious about the electric grid and how to share/distribute electricity in a less centralized manner.
+Professionally, these days I'm working across the stack (Rust/React) in the B2B SaaS world, [reducing the friction and manual process of compliance for large companies](https://www.impero.com/). I enjoy working at the intersection where organizations and the software they build meet and how to improve the communication, collaboration quality and experience around it.
+
+Technologically particularly attracted to distributed systems and have found a lot of joy when working with Elixir and most recently in Rust. I'm also genuinely curious about the electric grid and how to share/distribute electricity in a less centralized manner.
 
 In the past couple of years I spent some time building a distributed IoT sports camera system and developing a computer vision virtual coach for racket sports at a Copenhagen startup.
 Previously spent a few years in the health-tech domain, augmenting radiology at [Radiobotics](https://radiobotics.com).
