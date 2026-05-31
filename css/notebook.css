@@ -156,6 +156,14 @@ a.link:hover { color: var(--accent-3); border-bottom-color: var(--accent-3); }
 
 hr.rule { border: 0; border-top: .5px solid var(--rule); margin: 0; }
 hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
+.dinkus {
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 15px;
+  letter-spacing: .2em;
+  margin: 40px 0 24px;
+  user-select: none;
+}
 
 .app {
   position: relative;
@@ -358,7 +366,7 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 }
 
 /* flat homepage index — typographic structure without year heads */
-.home-index { margin-top: 8px; border-top: .5px solid var(--rule); }
+.home-index { margin-top: 8px; }
 .home-index .entry { padding: 18px 0; }
 .home-index .entry .title {
   font-family: 'Geist', system-ui, sans-serif;
@@ -466,7 +474,7 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
 }
 
 /* homepage intro */
-.home-intro { max-width: 640px; margin-top: 8px; }
+.home-intro { max-width: 640px; margin: 8px auto 0; text-align: center; }
 .home-intro .lede {
   font-family: 'Geist', system-ui, sans-serif;
   font-size: clamp(16px, 1.4vw, 19px);
@@ -1217,7 +1225,7 @@ hr.rule-2 { border: 0; border-top: .5px solid var(--rule-2); margin: 0; }
   max-width: 1080px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
 }
 @media (max-width: 720px) { .foot-inner { grid-template-columns: 1fr 1fr; } }

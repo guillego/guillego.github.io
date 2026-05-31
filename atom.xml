@@ -5,13 +5,41 @@
 	<link href="https://guillego.com/atom.xml" rel="self" type="application/atom+xml"/>
 	<link href="https://guillego.com/" rel="alternate" type="text/html"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2026-04-25T00:00:00+00:00</updated>
+	<updated>2026-05-31T00:00:00+00:00</updated>
 	<id>https://guillego.com/atom.xml</id>
 	
 		<author>
 			<name>guillego</name>
 		</author>
 	
+	
+		<entry xml:lang="en">
+			<title>About</title>
+			<published>2026-05-31T00:00:00+00:00</published>
+			<updated>2026-05-31T00:00:00+00:00</updated>
+			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;about&#x2F;" type="text/html"/>
+			<id>https:&#x2F;&#x2F;guillego.com&#x2F;about&#x2F;</id>
+			<content type="html">&lt;img src=&quot;&#x2F;img&#x2F;profile.jpeg&quot; alt=&quot;Profile photo&quot; style=&quot;max-width: 280px; height: auto;&quot;&gt;
+&lt;p&gt;I’m Guille. You may also know me as guillego.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m a &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;guillermo-go&#x2F;&quot;&gt;telecom-turned-biomedical-turned-software engineer&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Born and raised in Madrid, Spain, moved to Copenhagen a few years ago, where my favorite things are cycling through the city,
+jumping into the sea, eating pastries and the long days of summer.&lt;&#x2F;p&gt;
+&lt;p&gt;Professionally, these days I&#x27;m working across the stack (Rust&#x2F;React) in the B2B SaaS world, &lt;a href=&quot;https:&#x2F;&#x2F;www.impero.com&#x2F;&quot;&gt;reducing the friction and manual process of compliance for large companies&lt;&#x2F;a&gt;. I enjoy working at the intersection where organizations and the software they build meet and how to improve the communication, collaboration quality and experience around it.&lt;&#x2F;p&gt;
+&lt;p&gt;Technologically particularly attracted to distributed systems and have found a lot of joy when working with Elixir and most recently in Rust. I&#x27;m also genuinely curious about the electric grid and how to share&#x2F;distribute electricity in a less centralized manner.&lt;&#x2F;p&gt;
+&lt;p&gt;In the past couple of years I spent some time building a distributed IoT sports camera system and developing a computer vision virtual coach for racket sports at a Copenhagen startup.
+Previously spent a few years in the health-tech domain, augmenting radiology at &lt;a href=&quot;https:&#x2F;&#x2F;radiobotics.com&quot;&gt;Radiobotics&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I like to &lt;a href=&quot;https:&#x2F;&#x2F;instagram.com&#x2F;iamsiesta&#x2F;&quot;&gt;capture life with my camera&lt;&#x2F;a&gt;, take trips on my bike, rock climb and write.&lt;&#x2F;p&gt;
+&lt;p&gt;I devour podcasts, books, wikipedia, blogs and any source of interesting information. Is there such thing as being too curious?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;find-me&quot;&gt;Find me&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;guillermo-go&#x2F;&quot;&gt;Guillermo Galan Olleros&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;guillego&quot;&gt;guillego&lt;&#x2F;a&gt; on GitHub&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;guillego.com&quot;&gt;@guillego.com&lt;&#x2F;a&gt; on bluesky&lt;&#x2F;li&gt;
+&lt;li&gt;Message me: mail [in-the-mailbox-of] guillego.com&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+			
+		</entry>
 	
 		<entry xml:lang="en">
 			<title>April 2026</title>
@@ -91,34 +119,6 @@
 				
 					<category term="posse"/>
 				
-			
-		</entry>
-	
-		<entry xml:lang="en">
-			<title>About</title>
-			<published>2025-01-23T00:00:00+00:00</published>
-			<updated>2025-01-23T00:00:00+00:00</updated>
-			<link href="https:&#x2F;&#x2F;guillego.com&#x2F;about&#x2F;" type="text/html"/>
-			<id>https:&#x2F;&#x2F;guillego.com&#x2F;about&#x2F;</id>
-			<content type="html">&lt;img src=&quot;&#x2F;img&#x2F;profile.jpeg&quot; height=&quot;256&quot; alt=&quot;Profile photo&quot;&gt;
-&lt;p&gt;Hi!&lt;&#x2F;p&gt;
-&lt;p&gt;I’m Guille. You may also know me as guillego or iamsiesta.&lt;&#x2F;p&gt;
-&lt;p&gt;I&#x27;m a &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;guillermo-go&#x2F;&quot;&gt;telecom-turned-biomedical-turned-software engineer&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Born and raised in Madrid, Spain, moved to Copenhagen a few years ago, where my favorite things are cycling through the city,
-jumping into the sea, eating pastries and the long days of summer.&lt;&#x2F;p&gt;
-&lt;p&gt;Professionally, these days I&#x27;m working across the stack (Rust&#x2F;React) in the SaaS world, reducing the friction and manual process of compliance for large companies. I&#x27;m particularly attracted to distributed systems and have found a lot of joy when working with Elixir and most recently in Go and Rust. I&#x27;m also genuinely curious about the electric grid and how to share&#x2F;distribute electricity in a less centralized manner.&lt;&#x2F;p&gt;
-&lt;p&gt;In the past couple of years I spent some time building a distributed IoT sports camera system and developing a computer vision virtual coach for racket sports at a Copenhagen startup.
-Previously spent a few years in the health-tech domain, augmenting radiology at &lt;a href=&quot;https:&#x2F;&#x2F;radiobotics.com&quot;&gt;Radiobotics&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;I like to &lt;a href=&quot;https:&#x2F;&#x2F;instagram.com&#x2F;iamsiesta&#x2F;&quot;&gt;capture life with my camera&lt;&#x2F;a&gt;, take trips on my bike, rock climb and write.&lt;&#x2F;p&gt;
-&lt;p&gt;I devour podcasts, books, wikipedia, blogs and any source of interesting information. Is there such thing as being too curious?&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;find-me&quot;&gt;Find me&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;guillermo-go&#x2F;&quot;&gt;Guillermo Galan Olleros&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;guillego&quot;&gt;guillego&lt;&#x2F;a&gt; on GitHub&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;guillego.com&quot;&gt;@guillego.com&lt;&#x2F;a&gt; on bluesky&lt;&#x2F;li&gt;
-&lt;li&gt;Message me: mail [in-the-mailbox-of] guillego.com&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
 			
 		</entry>
 	
