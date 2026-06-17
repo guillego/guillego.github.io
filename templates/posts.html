@@ -1,51 +1,32 @@
-{% extends "notebook-base.html" %}
+{% extends "base.html" %}
 
-{% block title %}Posts — {{ config.title }}{% endblock %}
+{% block title %}Blog — {{ config.title }}{% endblock %}
 
 {% block body %}
-<main class="page">
-  <header class="page-hero ink-in">
-    <h1 class="page-title ink-in d1"><em>Posts</em></h1>
-    {% if section.content %}
-      <div class="lede ink-in d2 page-lede">{{ section.content | safe }}</div>
-    {% elif section.description %}
-      <p class="lede ink-in d2 page-lede">{{ section.description | markdown(inline=true) | safe }}</p>
-    {% endif %}
-  </header>
+<div class="page-head">
+  <h1 class="page-title">Blog</h1>
+  {% if section.description %}<p class="page-intro">{{ section.description }}</p>{% endif %}
+</div>
+<div class="divider">&#10087;&nbsp;&#9753;</div>
 
-  <hr class="rule" style="margin-top:36px; margin-bottom:8px">
-
-  {% if paginator %}{% set show_pages = paginator.pages %}{% else %}{% set show_pages = section.pages %}{% endif %}
-
-  <div class="ink-in d2 home-index">
-    {% for p in show_pages %}
-      <a class="entry" href="{{ p.permalink }}">
-        <span class="date">{{ p.date | date(format="%Y.%m.%d") }}</span>
-        <span class="mark">
-          <svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
-        </span>
-        <span class="title">
-          {{ p.title }}
-          {% if p.description %}
-            <div class="entry-desc">{{ p.description }}</div>
-          {% endif %}
-          {% if p.taxonomies and p.taxonomies.tags %}
-            <div class="entry-meta">
-              {% if p.reading_time %}{{ p.reading_time }} min · {% endif %}{% for t in p.taxonomies.tags %}#{{ t }}{% if not loop.last %} · {% endif %}{% endfor %}
-            </div>
-          {% endif %}
-        </span>
-        <span class="arrow">→</span>
-      </a>
-    {% endfor %}
-  </div>
-
-  {% if paginator %}
-    <nav class="paginator">
-      {% if paginator.previous %}<a class="link" href="{{ paginator.previous }}">← previous</a>{% endif %}
-      <span class="muted-2 mono">page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
-      {% if paginator.next %}<a class="link" href="{{ paginator.next }}">next →</a>{% endif %}
-    </nav>
-  {% endif %}
+{% if paginator %}{% set show_pages = paginator.pages %}{% else %}{% set show_pages = section.pages %}{% endif %}
+<main class="timeline">
+  {% for p in show_pages %}
+    <div class="row blog notag">
+      <div class="lcol"><span class="dt">{{ p.date | date(format="%Y.%m.%d") }}</span></div>
+      <div>
+        <a class="title" href="{{ p.permalink }}">{{ p.title }}</a>
+        {% if p.description %}<div class="sub">{{ p.description }}</div>{% endif %}
+        {% if p.taxonomies.tags %}<div class="topics">{% for t in p.taxonomies.tags %}<a class="topic" data-topic="{{ t }}" href="{{ get_taxonomy_url(kind='tags', name=t) | safe }}">#{{ t }}</a>{% endfor %}</div>{% endif %}
+      </div>
+    </div>
+  {% endfor %}
 </main>
+
+{% if paginator %}
+<nav class="prevnext">
+  {% if paginator.previous %}<a href="{{ paginator.previous }}">&larr; newer</a>{% else %}<span></span>{% endif %}
+  {% if paginator.next %}<a href="{{ paginator.next }}">older &rarr;</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endif %}
 {% endblock %}

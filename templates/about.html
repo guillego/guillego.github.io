@@ -1,19 +1,17 @@
-{% extends "notebook-base.html" %}
+{% extends "base.html" %}
 
 {% block title %}About — {{ config.title }}{% endblock %}
 
 {% block body %}
-<main class="page narrow">
-  <header class="page-hero ink-in">
-    <h1 class="page-title ink-in d1"><em>Hi!</em></h1>
-  </header>
+<div class="post-head"><h1 class="post-title">Hi, I'm Guillermo.</h1></div>
+<div class="post-divider">&#10087;&nbsp;&#9753;</div>
 
-  <hr class="rule" style="margin-top:36px; margin-bottom:32px">
+<article><div class="body">{{ page.content | safe }}</div></article>
 
-  <article class="article ink-in d2">
-    <div class="article-body">
-      {{ page.content | safe }}
-    </div>
-  </article>
-</main>
+<div class="elsewhere">
+  <div class="links">
+    {% if config.extra.email_obfuscated %}<a class="em" href="mailto:">{{ config.extra.email_obfuscated }}</a>{% endif %}
+    {% for s in config.extra.social %}<a href="{{ s.url }}">{{ s.name }}</a>{% endfor %}
+  </div>
+</div>
 {% endblock %}

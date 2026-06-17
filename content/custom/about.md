@@ -5,7 +5,7 @@ path = "about"
 template = "about.html"
 +++
 
-<img src="/img/profile.jpeg" alt="Profile photo" style="max-width: 280px; height: auto;">
+<img class="portrait" src="/img/profile.jpeg" alt="Profile photo">
 
 I’m Guille. You may also know me as guillego.
 

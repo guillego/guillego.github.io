@@ -1,25 +1,17 @@
-{% extends "notebook-base.html" %}
+{% extends "base.html" %}
 
 {% block title %}Tags — {{ config.title }}{% endblock %}
 
 {% block body %}
-<main class="page narrow">
-  <header class="page-hero ink-in">
-    <div class="t-cap">An index of tags</div>
-    <h1 class="page-title ink-in d1"><em>Tags</em></h1>
-    <p class="lede ink-in d2 page-lede">
-      Browse the notebook by subject. Each tag links to the entries that share it.
-    </p>
-  </header>
+<div class="page-head">
+  <h1 class="page-title">Tags</h1>
+  <p class="page-intro">Browse by subject. Each tag links to the entries that share it.</p>
+</div>
+<div class="divider">&#10087;&nbsp;&#9753;</div>
 
-  <hr class="rule" style="margin-top:36px; margin-bottom:24px">
-
-  <div class="tag-cloud ink-in d3">
-    {% for term in terms %}
-      <a class="tag" href="{{ term.permalink | safe }}">
-        #{{ term.name }}<span class="n">{{ term.pages | length }}</span>
-      </a>
-    {% endfor %}
-  </div>
-</main>
+<div class="tag-cloud">
+  {% for term in terms %}
+    <a href="{{ term.permalink | safe }}">#{{ term.name }}<span class="n">{{ term.pages | length }}</span></a>
+  {% endfor %}
+</div>
 {% endblock %}

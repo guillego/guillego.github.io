@@ -1,42 +1,30 @@
-{% extends "notebook-base.html" %}
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
 
 {% block body %}
-<main class="page narrow">
-  <article class="article ink-in">
-    {% set parent = page.ancestors | last %}
-    {% if "posts" in page.relative_path %}
-      <a class="t-cap article-back" href="/posts">← back to posts</a>
-    {% elif "projects" in page.relative_path %}
-      <a class="t-cap article-back" href="/projects">← back to projects</a>
-    {% endif %}
-
-    <h1 class="ink-in d1">{{ page.title }}</h1>
-
-    {% if page.description %}
-      <p class="lede ink-in d2 article-lede">{{ page.description }}</p>
-    {% endif %}
-
-    <div class="byline ink-in d3">
+{% set is_project = page.relative_path is starting_with("projects/") %}
+<article>
+  <div class="post-head">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="byline">
       <span>{{ page.date | date(format="%Y.%m.%d") }}</span>
-      {% if page.reading_time %}
-        <span>·</span>
-        <span>{{ page.reading_time }} min · {{ page.word_count }} words</span>
-      {% endif %}
-      {% if page.taxonomies and page.taxonomies.tags %}
-        <span>·</span>
-        <span class="article-tags">
-          {% for t in page.taxonomies.tags %}
-            <a class="link" href="{{ get_taxonomy_url(kind='tags', name=t) | safe }}">#{{ t }}</a>
-          {% endfor %}
-        </span>
-      {% endif %}
+      {% if page.reading_time and not is_project %}<span>{{ page.reading_time }} min read</span>{% endif %}
+      {% if page.taxonomies.tags %}{% for t in page.taxonomies.tags %}<a class="topic" data-topic="{{ t }}" href="{{ get_taxonomy_url(kind='tags', name=t) | safe }}">#{{ t }}</a>{% endfor %}{% endif %}
+      {% if is_project and page.extra.url %}<a class="visit" href="{{ page.extra.url }}">visit &#8599;</a>{% endif %}
     </div>
+  </div>
+  <div class="post-divider">&#10087;&nbsp;&#9753;</div>
+  <div class="body">{{ page.content | safe }}</div>
+</article>
 
-    <div class="article-body ink-in d3">
-      {{ page.content | safe }}
-    </div>
-  </article>
-</main>
+{{ macros::related(page=page) }}
+
+{% if not is_project %}
+<nav class="prevnext">
+  {% if page.earlier %}<a href="{{ page.earlier.permalink }}">&larr; {{ page.earlier.title }}</a>{% else %}<span></span>{% endif %}
+  {% if page.later %}<a href="{{ page.later.permalink }}">{{ page.later.title }} &rarr;</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endif %}
 {% endblock %}

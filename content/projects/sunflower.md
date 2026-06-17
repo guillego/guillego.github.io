@@ -1,10 +1,12 @@
 +++
 title = "sunflower cam"
 date = 2024-11-18
+description = "A sunflower grows in Østerbro, photographed once an hour for a whole season."
 
 [taxonomies]
 tags = ["personal", "projects"]
 [extra]
+url = "https://sunflower.guillego.com/"
 images = [
     {src = "/img/2024/2024-11-18-sunflower.jpg", alt = "sunflower blossoming"},
 

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="{{ lang | default(value=config.default_language) }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+
+  <link rel="stylesheet" href="{{ get_url(path='css/main.css') | safe }}">
+  {% if config.extra.favicon %}<link rel="icon" type="image/png" href="{{ config.extra.favicon }}">{% endif %}
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+
+  {% block meta %}
+    {% set desc = "" %}
+    {% if page and page.description %}{% set desc = page.description %}
+    {% elif section and section.description %}{% set desc = section.description %}{% endif %}
+    {% if desc %}<meta name="description" content="{{ desc }}">{% endif %}
+    <meta property="og:title" content="{% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% else %}{{ config.title }}{% endif %}">
+    {% if desc %}<meta property="og:description" content="{{ desc }}">{% endif %}
+  {% endblock %}
+
+  {% if config.extra.goatcounter %}
+  <script data-goatcounter="https://{{ config.extra.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
+
+  <script>try{if(localStorage.getItem('mode')==='dark')document.documentElement.classList.add('dark');}catch(e){}</script>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+{% macro nav_link(url, label, t) %}
+  {% set cp = current_path | default(value="") %}
+  {% set is_active = false %}
+  {% if url == "/" and cp == "/" %}{% set is_active = true %}
+  {% elif url != "/" and cp is starting_with(url) %}{% set is_active = true %}{% endif %}
+  <a class="{% if is_active %}on{% endif %}" data-t="{{ t }}" href="{{ url }}">{{ label }}</a>
+{% endmacro nav_link %}
+
+<header class="site">
+  <nav class="main">
+    {{ self::nav_link(url="/", label="index", t="index") }}
+    {{ self::nav_link(url="/thoughts", label="thoughts", t="thoughts") }}
+    {{ self::nav_link(url="/posts", label="blog", t="blog") }}
+    {{ self::nav_link(url="/photography", label="photography", t="photography") }}
+    {{ self::nav_link(url="/projects", label="projects", t="projects") }}
+    {{ self::nav_link(url="/about", label="about", t="about") }}
+    {{ self::nav_link(url="/now", label="now", t="now") }}
+  </nav>
+</header>
+
+{% block body %}{% endblock %}
+
+<footer class="end">
+  <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">rss</a>
+  <button id="mode-toggle" type="button">view in dark mode</button>
+</footer>
+
+<script src="{{ get_url(path='js/site.js') | safe }}" defer></script>
+</body>
+</html>

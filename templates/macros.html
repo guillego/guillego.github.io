@@ -1,0 +1,17 @@
+{% macro type_key(page) %}{% if page.relative_path is starting_with("posts/") %}blog{% elif page.relative_path is starting_with("thoughts/") %}thought{% elif page.relative_path is starting_with("photography/") %}photo{% elif page.relative_path is starting_with("projects/") %}project{% elif page.relative_path is starting_with("now/") %}now{% else %}blog{% endif %}{% endmacro type_key %}
+
+{% macro related(page) %}
+{% if page.extra.related %}
+<div class="related">
+  <h3>related</h3>
+  {% for path in page.extra.related %}
+    {% set rp = get_page(path=path) %}
+    {% set rk = self::type_key(page=rp) | trim %}
+    <a class="relitem {{ rk }}" href="{{ rp.permalink }}" title="{{ rk }}">
+      <span class="rtitle">{% if rp.title %}{{ rp.title }}{% else %}{{ rp.content | striptags | trim | truncate(length=80) }}{% endif %}</span>
+      <span class="rdate">{{ rp.date | date(format="%Y.%m.%d") }}</span>
+    </a>
+  {% endfor %}
+</div>
+{% endif %}
+{% endmacro related %}

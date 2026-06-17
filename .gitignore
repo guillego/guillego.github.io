@@ -8,3 +8,6 @@ public/
 src_photos/
 
 .direnv/
+
+# Brainstorming visual-companion mockups
+.superpowers/

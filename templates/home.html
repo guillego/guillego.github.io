@@ -1,100 +1,37 @@
-{% extends "notebook-base.html" %}
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block body %}
-{% set thoughts = get_section(path="thoughts/_index.md") %}
-{% set posts_section = get_section(path="posts/_index.md") %}
-{% set photos_section = get_section(path="photography/_index.md") %}
-{% set projects_section = get_section(path="projects/_index.md") %}
+{% set s_thoughts = get_section(path="thoughts/_index.md") %}
+{% set s_posts = get_section(path="posts/_index.md") %}
+{% set s_photo = get_section(path="photography/_index.md") %}
+{% set s_projects = get_section(path="projects/_index.md") %}
+{# /now updates are intentionally excluded from the home stream — reachable via the now nav #}
+{% set entries = s_thoughts.pages | concat(with=s_posts.pages) | concat(with=s_photo.pages) | concat(with=s_projects.pages) | sort(attribute="date") | reverse %}
 
-<main class="page">
-  <div class="home-intro ink-in">
-    {% if config.extra.intro %}
-      <p class="lede">{{ config.extra.intro | markdown(inline=true) | safe }}</p>
-    {% endif %}
-    {% if config.extra.intro_more %}
-      <p class="lede">{{ config.extra.intro_more | markdown(inline=true) | safe }}</p>
-    {% endif %}
-  </div>
+<section class="intro">
+  {% if config.extra.intro %}<p>{{ config.extra.intro | markdown(inline=true) | safe }}</p>{% endif %}
+  {% if config.extra.intro_more %}<p>{{ config.extra.intro_more | markdown(inline=true) | safe }}</p>{% endif %}
+</section>
 
-  <div class="dinkus" aria-hidden="true">* * *</div>
+<div class="divider">&#10087;&nbsp;&#9753;</div>
 
-  {# ─── INDEX (thoughts + posts merged, flat) ──────────────────── #}
-  {% set entries = thoughts.pages | concat(with=posts_section.pages) | sort(attribute="date") | reverse %}
-
-  <div class="ink-in d2 home-index">
-    {% for entry in entries %}
-      {% set is_thought = entry.relative_path is starting_with("thoughts/") %}
-      <a class="entry" href="{{ entry.permalink }}">
-        <span class="date">{{ entry.date | date(format="%Y.%m.%d") }}</span>
-        <span class="mark">
-          {% if is_thought %}
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
-          {% else %}
-            <svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
-          {% endif %}
-        </span>
-        <span class="title">
-          {% if is_thought %}
-            {{ entry.content | striptags | trim | truncate(length=140) }}
-          {% else %}
-            {{ entry.title }}
-          {% endif %}
-        </span>
-        <span class="arrow">→</span>
-      </a>
-    {% endfor %}
-  </div>
-
-  {# ─── PROJECTS ──────────────────────────────────────────────── #}
-  {% set top_projects = projects_section.pages | slice(end=3) %}
-  {% if top_projects | length > 0 %}
-  <section class="ink-in home-block">
-    <h2 class="home-block-title"><em>Projects</em></h2>
-    <div class="home-projects">
-      {% for p in top_projects %}
-        <a href="{{ p.permalink }}" class="home-project">
-          <div class="t-cap">{% if p.date %}{{ p.date | date(format="%Y") }}{% endif %}</div>
-          <div class="home-project-title"><em>{{ p.title }}</em></div>
-          <div class="home-project-desc">
-            {%- if p.description -%}{{ p.description | striptags | trim | truncate(length=140) }}
-            {%- elif p.summary -%}{{ p.summary | striptags | trim | truncate(length=140) }}
-            {%- else -%}{{ p.content | striptags | trim | truncate(length=140) }}{%- endif -%}
-          </div>
-        </a>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
-  {# ─── PHOTOGRAPHS ──────────────────────────────────────────── #}
-  {% set top_photos = photos_section.pages | slice(end=6) %}
-  {% if top_photos | length > 0 %}
-  <section class="ink-in home-block">
-    <h2 class="home-block-title"><em>Photographs</em></h2>
-    <div class="home-photos">
-      {% for ph in top_photos %}
-        {% set thumb = "" %}
-        {% if ph.extra and ph.extra.images and ph.extra.images | length > 0 %}
-          {% set thumb = ph.extra.images.0.src %}
+<main class="timeline">
+  {% for entry in entries %}
+    {% set tkey = macros::type_key(page=entry) | trim %}
+    <div class="row {{ tkey }}">
+      <div class="lcol">
+        <span class="dt">{{ entry.date | date(format="%Y.%m.%d") }}</span>
+        <span class="tt {{ tkey }}" data-type="{{ tkey }}">{{ tkey }}</span>
+      </div>
+      <div>
+        <a class="title" href="{{ entry.permalink }}">{% if tkey == "thought" %}{{ entry.content | striptags | trim | truncate(length=140) }}{% else %}{{ entry.title }}{% endif %}</a>
+        {% if entry.description %}<div class="sub">{{ entry.description }}</div>{% endif %}
+        {% if entry.taxonomies.tags %}
+          <div class="topics">{% for t in entry.taxonomies.tags %}<a class="topic" data-topic="{{ t }}" href="{{ get_taxonomy_url(kind='tags', name=t) | safe }}">#{{ t }}</a>{% endfor %}</div>
         {% endif %}
-        <a class="plate" href="{{ ph.permalink }}">
-          <div class="frame" style="aspect-ratio: 4 / 3">
-            {% if thumb %}
-              <img src="{{ thumb }}" alt="{{ ph.title }}" style="display:block; width:100%; height:100%; object-fit:cover">
-            {% else %}
-              <div style="width:100%; height:100%; background:var(--paper-3)"></div>
-            {% endif %}
-            <span class="corner-tl"></span><span class="corner-tr"></span><span class="corner-bl"></span><span class="corner-br"></span>
-          </div>
-          <div class="caption">
-            <span class="label">{{ ph.title }}</span>
-            <span class="date">{{ ph.date | date(format="%Y.%m.%d") }}</span>
-          </div>
-        </a>
-      {% endfor %}
+      </div>
     </div>
-  </section>
-  {% endif %}
-
+  {% endfor %}
 </main>
 {% endblock %}

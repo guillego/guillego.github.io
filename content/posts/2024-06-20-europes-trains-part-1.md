@@ -7,6 +7,10 @@ path = "posts/2024-06-20-europes-trains-part-1"
 tags = ["travel", "trains"]
 
 [extra]
+related = [
+  "posts/2024-06-19-croissant-cycling-trip-part-1.md",
+  "photography/nebelsuppe.md",
+]
 images = [
     {src = "/img/2024/2024-06-20-trains-2.jpg", alt = "deep beneath the cover"},
     {src = "/img/2024/2024-06-20-trains-1.jpg", alt = "of another perfect wonder"},

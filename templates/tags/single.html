@@ -1,41 +1,28 @@
-{% extends "notebook-base.html" %}
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block title %}#{{ term.name }} — {{ config.title }}{% endblock %}
 
 {% block body %}
-<main class="page">
-  <header class="page-hero ink-in">
-    <a class="t-cap article-back" href="/tags">← all tags</a>
-    <h1 class="page-title ink-in d1" style="margin-top:14px">
-      <em>#{{ term.name }}</em>
-      <span class="muted-2" style="font-size:.4em; margin-left:14px; font-style:normal">{{ term.pages | length }} {% if term.pages | length == 1 %}entry{% else %}entries{% endif %}</span>
-    </h1>
-  </header>
+<div class="page-head">
+  <h1 class="page-title">#{{ term.name }}</h1>
+  <p class="page-intro">{{ term.pages | length }} {% if term.pages | length == 1 %}entry{% else %}entries{% endif %}</p>
+</div>
+<div class="divider">&#10087;&nbsp;&#9753;</div>
 
-  <hr class="rule" style="margin-top:32px; margin-bottom:8px">
-
-  <div class="ink-in d2 home-index">
-    {% for p in term.pages %}
-      {% set is_thought = p.relative_path is starting_with("thoughts/") %}
-      <a class="entry" href="{{ p.permalink }}">
-        <span class="date">{{ p.date | date(format="%Y.%m.%d") }}</span>
-        <span class="mark">
-          {% if is_thought %}
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
-          {% else %}
-            <svg width="12" height="12" viewBox="0 0 12 12"><rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="0.9"/></svg>
-          {% endif %}
-        </span>
-        <span class="title">
-          {% if is_thought %}
-            <em>{{ p.content | striptags | trim | truncate(length=140) }}</em>
-          {% else %}
-            {{ p.title }}
-          {% endif %}
-        </span>
-        <span class="arrow">→</span>
-      </a>
-    {% endfor %}
-  </div>
+<main class="timeline">
+  {% for p in term.pages %}
+    {% set tkey = macros::type_key(page=p) | trim %}
+    <div class="row {{ tkey }}">
+      <div class="lcol">
+        <span class="dt">{{ p.date | date(format="%Y.%m.%d") }}</span>
+        <span class="tt {{ tkey }}" data-type="{{ tkey }}">{{ tkey }}</span>
+      </div>
+      <div>
+        <a class="title" href="{{ p.permalink }}">{% if tkey == "thought" %}{{ p.content | striptags | trim | truncate(length=140) }}{% else %}{{ p.title }}{% endif %}</a>
+        {% if p.taxonomies.tags %}<div class="topics">{% for t in p.taxonomies.tags %}<a class="topic" data-topic="{{ t }}" href="{{ get_taxonomy_url(kind='tags', name=t) | safe }}">#{{ t }}</a>{% endfor %}</div>{% endif %}
+      </div>
+    </div>
+  {% endfor %}
 </main>
 {% endblock %}
